@@ -32,24 +32,22 @@
      
     <owl:Ontology rdf:about="https://w3id.org/cybele/">
       <!-- TODO: Update on release -->
-      <owl:versionIRI rdf:resource="https://rawgit.com/wf4ever/ro/master/roevo.owl"/>
-      <owl:imports rdf:resource="https://rawgit.com/wf4ever/ro/master/metadata.owl"/>
+      <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/cybele-project/model/master/semantic-model.owl"/>
       
-      <owl:versionInfo>1.0.1-SNAPSHOT</owl:versionInfo>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-28T15:46:00Z</dct:issued>
-      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T15:46:00Z</dct:modified>
+      <owl:versionInfo>1.0</owl:versionInfo>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:issued>
+      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:modified>
 
       <!-- end TODO -->
-        <rdfs:comment xml:lang="en">The Research Object Evolution Ontology (roevo) extends the ro ontology to capture the lifecycle and versioning of research objects. ro ontology and other extensions are described at http://wf4ever.github.io/ro/.
-        roevo is also an extension of PROV ontology for describing Research Object evolution provenance. PROV ontology is described at http://www.w3.org/TR/prov-o/.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets</rdfs:comment>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
         <dc:creator>Raul Palma</dc:creator>
         <dct:creator rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <dc:title xml:lang="en">Research Object Evolution Ontology</dc:title>
-        <dc:description xml:lang="en">The Research Object Evolution Ontology (roevo) extends the ro ontology to capture the lifecycle and versioning of research objects (ROs). roevo is also an extension of PROV ontology for describing Research Object evolution provenance.
-        roevo enables the representation of the different stages of the ROs lifecycle, their dependencies, as well as the corresponding versions of ROs and their aggregated resources, with the associated changes in these resources.
-        roevo follows a modular approach, enabling the creation of extensions for modeling detailed taxonomies of changes for particular resources, e.g., workflows.
-        Additional information about roevo and background information is available at http://www.wf4ever-project.org/wiki/display/docs/RO+evolution</dc:description>
+        <dc:title xml:lang="en">CYBELE Semantic Model</dc:title>
+        <dc:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather & climate data, supporting the on demand discovery and exploration.  
+        This semantic model will be used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it will be used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence). The semantic annotation of the data will facilitate:
+        i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps.        
+        Additional information about the model is available at https://www.cybele-project.eu/</dc:description>
         <dc:description rdf:resource="https://github.com/wf4ever/ro/raw/earth-science/diagrams/07-2016/roevo.jpg"/>
         <dc:contributor>Jun Zhao</dc:contributor>
         <dc:contributor rdf:resource="http://orcid.org/0000-0001-6935-9028"/>
