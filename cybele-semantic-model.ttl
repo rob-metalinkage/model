@@ -1,0 +1,502 @@
+@prefix : <https://w3id.org/cybele/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix stat: <http://data.europa.eu/m8g/> .
+@prefix schema: <http://schema.org/> .
+@base <https://w3id.org/cybele/> .
+
+<https://w3id.org/cybele/> rdf:type owl:Ontology ;
+                            owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.owl> ;
+                            dct:contributor [ schema:affiliation [ foaf:name "UPRC"
+                                                                 ] ;
+                                              foaf:name "Giorgos Santipantakis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "OGC"
+                                                                 ] ;
+                                              foaf:name "Ingo Simonis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "EXUS"
+                                                                 ] ;
+                                              foaf:name "Maria Plakia"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "OGC"
+                                                                 ] ;
+                                              foaf:name "Martin Klopfer"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "ICCS"
+                                                                 ] ;
+                                              foaf:name "Spiros Mouzakitis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "SUITE5"
+                                                                 ] ;
+                                              foaf:name "Konstantinos Latanis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "WU"
+                                                                 ] ;
+                                              foaf:name "Dilli Paudel"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Konstantinos Tarabanis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "EXUS"
+                                                                 ] ;
+                                              foaf:name "Konstantinos Kentrotis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Areti Karamanou"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Evangelos Kalampokis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Tambouris Efthimios"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Dimitris Zeginis"
+                                            ] ,
+                                            [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Eleni Panopoulou"
+                                            ] ;
+                            dct:creator [ schema:affiliation [ foaf:name "PSNC"
+                                                             ] ;
+                                          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                                          foaf:name "Raul Palma"
+                                        ] ;
+                            dct:description "The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model"@en ;
+                            dct:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
+                            dct:title "CYBELE Semantic Model"@en ;
+                            rdfs:comment "The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets"@en ;
+                            owl:versionInfo "1.0" ;
+                            foaf:depiction <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg> ;
+                            foaf:maker [ foaf:homepage <https://www.cybele-project.eu/> ;
+                                         foaf:name "CYBELE project"
+                                       ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+schema:affiliation rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+foaf:depiction rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/maker
+foaf:maker rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://data.europa.eu/m8g/dimension
+stat:dimension rdf:type owl:ObjectProperty ;
+               rdfs:range qb:DimensionProperty ;
+               rdfs:isDefinedBy stat:statdcat-ap .
+
+
+###  http://data.europa.eu/m8g/statUnitMeasure
+stat:statUnitMeasure rdf:type owl:ObjectProperty ;
+                     rdfs:range skos:Concept ;
+                     rdfs:isDefinedBy stat:statdcat-ap .
+
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+dct:accrualPeriodicity rdf:type owl:ObjectProperty ;
+                       rdfs:range dct:Frequency ;
+                       rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:ObjectProperty ;
+               rdfs:range dct:Standard ;
+               rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:ObjectProperty ;
+             rdfs:range dct:LinguisticSystem ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:ObjectProperty ;
+            rdfs:range dct:LicenseDocument ;
+            rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:ObjectProperty ;
+              rdfs:range foaf:Agent ;
+              rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/spatial
+dct:spatial rdf:type owl:ObjectProperty ;
+            rdfs:range dct:Location ;
+            rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/temporal
+dct:temporal rdf:type owl:ObjectProperty ;
+             rdfs:range dct:PeriodOfTime ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+dcat:downloadURL rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Distribution ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#endpointURL
+dcat:endpointURL rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:DataService ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#landingPage
+dcat:landingPage rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Dataset ;
+                 rdfs:range foaf:Document ;
+                 rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#mediaType
+dcat:mediaType rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Distribution ;
+               rdfs:range dct:MediaTypeOrExtent ;
+               rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range skos:Concept ;
+           rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/prov#wasAssociatedWith
+prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
+                       rdfs:domain prov:Activity ;
+                       rdfs:range prov:Agent ;
+                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range prov:Agent ;
+                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity ;
+                    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:range rdfs:Literal ;
+               rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:DatatypeProperty ;
+           rdfs:range rdfs:Literal ;
+           rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://www.w3.org/ns/dcat#spatialResolutionInMeters
+dcat:spatialResolutionInMeters rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:decimal ;
+                               rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#temporalResolution
+dcat:temporalResolution rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:duration ;
+                        rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Agent
+dct:Agent rdf:type owl:Class ;
+          owl:equivalentClass foaf:Agent ;
+          rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/Frequency
+dct:Frequency rdf:type owl:Class ;
+              rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class ;
+                    rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+dct:LinguisticSystem rdf:type owl:Class ;
+                     rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/Location
+dct:Location rdf:type owl:Class ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/MediaTypeOrExtent
+dct:MediaTypeOrExtent rdf:type owl:Class ;
+                      rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/PeriodOfTime
+dct:PeriodOfTime rdf:type owl:Class ;
+                 rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+qb:DimensionProperty rdf:type owl:Class ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class ;
+              rdfs:isDefinedBy rdfs: .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Dataset ;
+             rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#DataService
+dcat:DataService rdf:type owl:Class ;
+                 rdfs:subClassOf dcat:Resource ;
+                 rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Resource ;
+             rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class ;
+                  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:isDefinedBy prov: .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:isDefinedBy prov: .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:isDefinedBy prov: .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:isDefinedBy foaf: .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type owl:Class ;
+              rdfs:isDefinedBy foaf: .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://creativecommons.org/licenses/by/4.0/
+<http://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/cybele/
+<https://w3id.org/cybele/> rdf:type owl:NamedIndividual ;
+                           dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+                           dct:publisher <https://www.cybele-project.eu/> ;
+                           dct:issued "2019-08-30T12:00:00Z"^^xsd:dateTime ;
+                           dct:modified "2019-08-30T12:00:00Z"^^xsd:dateTime .
+
+
+###  https://www.cybele-project.eu/
+<https://www.cybele-project.eu/> rdf:type owl:NamedIndividual .
+
+
+[ schema:affiliation [ foaf:name "UPRC"
+                     ] ;
+  foaf:name "Giorgos Santipantakis"
+] .
+
+[ schema:affiliation [ foaf:name "OGC"
+                      ] ;
+   foaf:name "Ingo Simonis"
+ ] .
+
+[ schema:affiliation [ foaf:name "PSNC"
+                      ] ;
+   rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+   foaf:name "Raul Palma"
+ ] .
+
+[ schema:affiliation [ foaf:name "EXUS"
+                      ] ;
+   foaf:name "Maria Plakia"
+ ] .
+
+[ schema:affiliation [ foaf:name "OGC"
+                      ] ;
+   foaf:name "Martin Klopfer"
+ ] .
+
+[ schema:affiliation [ foaf:name "ICCS"
+                      ] ;
+   foaf:name "Spiros Mouzakitis"
+ ] .
+
+[ schema:affiliation [ foaf:name "SUITE5"
+                      ] ;
+   foaf:name "Konstantinos Latanis"
+ ] .
+
+[ foaf:homepage <https://www.cybele-project.eu/> ;
+   foaf:name "CYBELE project"
+ ] .
+
+[ schema:affiliation [ foaf:name "WU"
+                      ] ;
+   foaf:name "Dilli Paudel"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Konstantinos Tarabanis"
+ ] .
+
+[ schema:affiliation [ foaf:name "EXUS"
+                      ] ;
+   foaf:name "Konstantinos Kentrotis"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Areti Karamanou"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Evangelos Kalampokis"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Tambouris Efthimios"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Dimitris Zeginis"
+ ] .
+
+[ schema:affiliation [ foaf:name "CERTH"
+                      ] ;
+   foaf:name "Eleni Panopoulou"
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

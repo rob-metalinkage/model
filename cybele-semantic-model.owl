@@ -41,103 +41,100 @@
       <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:modified>
 
       <!-- end TODO -->
-      <dc:title xml:lang="en">CYBELE Semantic Model</dc:title>
+      <dct:title xml:lang="en">CYBELE Semantic Model</dct:title>
       <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets</rdfs:comment>
-      <dc:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather & climate data, supporting the on demand discovery and exploration.  
-      This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate:
-      i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps.        
-      Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model</dc:description>
-      <dc:description rdf:resource="https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg"/>
+      <dct:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model</dct:description>
+      <foaf:depiction rdf:resource="https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg"/>
         
       <dct:creator>
       	<rdf:Description>
 					<foaf:name>Raul Palma</foaf:name>
-						<schema:affiliation><foaf:name>PSNC</foaf:name></schema:affiliation>
+						<schema:affiliation><rdf:Description><foaf:name>PSNC</foaf:name></rdf:Description></schema:affiliation>
 						<rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922" />
 				</rdf:Description>
 			</dct:creator>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Dimitris Zeginis</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Evangelos Kalampokis</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Dilli Paudel</foaf:name>
-					<schema:affiliation><foaf:name>WU</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>WU</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Konstantinos Latanis</foaf:name>
-					<schema:affiliation><foaf:name>SUITE5</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>SUITE5</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Konstantinos Kentrotis</foaf:name>
-					<schema:affiliation><foaf:name>EXUS</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>EXUS</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Maria Plakia</foaf:name>
-					<schema:affiliation><foaf:name>EXUS</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>EXUS</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Spiros Mouzakitis</foaf:name>
-					<schema:affiliation><foaf:name>ICCS</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>ICCS</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Martin Klopfer</foaf:name>
-					<schema:affiliation><foaf:name>OGC</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>OGC</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Ingo Simonis</foaf:name>
-					<schema:affiliation><foaf:name>OGC</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>OGC</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Giorgos Santipantakis</foaf:name>
-					<schema:affiliation><foaf:name>UPRC</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>UPRC</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Areti Karamanou</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Eleni Panopoulou</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 					<rdf:Description>
 					<foaf:name>Tambouris Efthimios</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<dct:contributor>
 				<rdf:Description>
 					<foaf:name>Konstantinos Tarabanis</foaf:name>
-					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+					<schema:affiliation><rdf:Description><foaf:name>CERTH</foaf:name></rdf:Description></schema:affiliation>
 				</rdf:Description>
 			</dct:contributor>
 			<foaf:maker>
@@ -146,7 +143,7 @@
 					<foaf:homepage rdf:resource="https://www.cybele-project.eu/" />
 				</rdf:Description>
 			</foaf:maker>
-      <dc:rights xml:lang="en">This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</dc:rights>
+      <dct:rights xml:lang="en">This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</dct:rights>
       <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
       <dct:publisher rdf:resource="https://www.cybele-project.eu/"/>
     </owl:Ontology>
@@ -306,30 +303,35 @@
 
     <owl:DatatypeProperty rdf:about="&dct;identifier">
       <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+      <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:DatatypeProperty rdf:about="&dct;issued">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
 
 		<!-- http://purl.org/dc/terms/modified -->
 
     <owl:DatatypeProperty rdf:about="&dct;modified">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
     <!-- http://www.w3.org/ns/dcat#temporalResolution -->
 
     <owl:DatatypeProperty rdf:about="&dcat;temporalResolution">
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+        <rdfs:range rdf:resource="&xsd;duration"/>
     </owl:DatatypeProperty>
     
     <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
 
     <owl:DatatypeProperty rdf:about="&dcat;spatialResolutionInMeters">
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
 
     
