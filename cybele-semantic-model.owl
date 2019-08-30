@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY stat "http://data.europa.eu/m8g/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY qb "http://purl.org/linked-data/cube#" >
+]>
+
+
+<rdf:RDF xmlns="https://w3id.org/cybele/"
+     xml:base="https://w3id.org/cybele/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:stat="http://data.europa.eu/m8g/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:schema="http://schema.org/"
+     xmlns:qb="http://purl.org/linked-data/cube#">
+     
+    <owl:Ontology rdf:about="https://w3id.org/cybele/">
+      <!-- TODO: Update on release -->
+      <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/cybele-project/model/master/semantic-model.owl"/>
+      
+      <owl:versionInfo>1.0</owl:versionInfo>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:issued>
+      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:modified>
+
+      <!-- end TODO -->
+      <dc:title xml:lang="en">CYBELE Semantic Model</dc:title>
+      <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets</rdfs:comment>
+      <dc:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather & climate data, supporting the on demand discovery and exploration.  
+      This semantic model will be used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it will be used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence). The semantic annotation of the data will facilitate:
+      i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps.        
+      Additional information about the model is available at https://www.cybele-project.eu/</dc:description>
+      <dc:description rdf:resource="https://github.com/cybele-project/model/blob/master/model_matching.jpg"/>
+        
+      <dct:creator>
+      	<rdf:Description>
+					<foaf:name>Raul Palma</foaf:name>
+						<schema:affiliation><foaf:name>PSNC</foaf:name></schema:affiliation>
+						<rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922" />
+				</rdf:Description>
+			</dct:creator>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Dimitris Zeginis</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Evangelos Kalampokis</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Dilli Paudel</foaf:name>
+					<schema:affiliation><foaf:name>WU</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Konstantinos Latanis</foaf:name>
+					<schema:affiliation><foaf:name>SUITE5</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Konstantinos Kentrotis</foaf:name>
+					<schema:affiliation><foaf:name>EXUS</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Maria Plakia</foaf:name>
+					<schema:affiliation><foaf:name>EXUS</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Spiros Mouzakitis</foaf:name>
+					<schema:affiliation><foaf:name>ICCS</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Martin Klopfer</foaf:name>
+					<schema:affiliation><foaf:name>OGC</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Ingo Simonis</foaf:name>
+					<schema:affiliation><foaf:name>OGC</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Giorgos Santipantakis</foaf:name>
+					<schema:affiliation><foaf:name>UPRC</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Areti Karamanou</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Eleni Panopoulou</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+					<rdf:Description>
+					<foaf:name>Tambouris Efthimios</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<dct:contributor>
+				<rdf:Description>
+					<foaf:name>Konstantinos Tarabanis</foaf:name>
+					<schema:affiliation><foaf:name>CERTH</foaf:name></schema:affiliation>
+				</rdf:Description>
+			</dct:contributor>
+			<foaf:maker>
+				<rdf:Description>
+					<foaf:name>CYBELE project</foaf:name>
+					<foaf:homepage rdf:resource="https://www.cybele-project.eu/" />
+				</rdf:Description>
+			</foaf:maker>
+      <dc:rights xml:lang="en">This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</dc:rights>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:publisher rdf:resource="https://www.cybele-project.eu/"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+		
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:ObjectProperty rdf:about="&dcat;theme">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:domain rdf:resource="&dcat;Dataset"/>
+      <rdfs:range rdf:resource="&skos;Concept"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+    <owl:ObjectProperty rdf:about="&dcat;mediaType">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:domain rdf:resource="&dcat;Distribution"/>
+      <rdfs:range rdf:resource="&dct;MediaTypeOrExtent"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+    <owl:ObjectProperty rdf:about="&dcat;landingPage">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:domain rdf:resource="&dcat;Dataset"/>
+      <rdfs:range rdf:resource="&foaf;Document"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:ObjectProperty rdf:about="&dcat;downloadURL">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:domain rdf:resource="&dcat;Distribution"/>
+      <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#endpointURL -->
+
+    <owl:ObjectProperty rdf:about="&dcat;endpointURL">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:domain rdf:resource="&dcat;DataService"/>
+      <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:ObjectProperty rdf:about="&dct;publisher">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+
+		<!-- http://purl.org/dc/terms/language -->
+
+    <owl:ObjectProperty rdf:about="&dct;language">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;LinguisticSystem"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:ObjectProperty rdf:about="&dct;accrualPeriodicity">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;Frequency"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <owl:ObjectProperty rdf:about="&dct;temporal">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;PeriodOfTime"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/spatial -->
+
+    <owl:ObjectProperty rdf:about="&dct;spatial">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;Location"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:ObjectProperty rdf:about="&dct;conformsTo">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;Standard"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:ObjectProperty rdf:about="&dct;license">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dct;LicenseDocument"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasGeneratedBy">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:domain rdf:resource="&prov;Entity"/>
+        <rdfs:range rdf:resource="&prov;Activity"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:domain rdf:resource="&prov;Activity"/>
+        <rdfs:range rdf:resource="&prov;Agent"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasAttributedTo">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:domain rdf:resource="&prov;Entity"/>
+        <rdfs:range rdf:resource="&prov;Agent"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://data.europa.eu/m8g/dimension -->
+
+    <owl:ObjectProperty rdf:about="&stat;dimension">
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/statdcat-ap"/>
+        <rdfs:range rdf:resource="&qb;DimensionProperty"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://data.europa.eu/m8g/statUnitMeasure -->
+
+    <owl:ObjectProperty rdf:about="&stat;statUnitMeasure">
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/statdcat-ap"/>
+        <rdfs:range rdf:resource="&skos;Concept"/>
+    </owl:ObjectProperty>
+    
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="&dct;identifier">
+      <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="&dct;issued">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+
+		<!-- http://purl.org/dc/terms/modified -->
+
+    <owl:DatatypeProperty rdf:about="&dct;modified">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#temporalResolution -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;temporalResolution">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;spatialResolutionInMeters">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    </owl:DatatypeProperty>
+
+    
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+    <owl:Class rdf:about="&dcat;Catalog">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="&dcat;Dataset">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:subClassOf rdf:resource="&dcat;Resource"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="&dcat;Distribution">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/ns/dcat#DataService -->
+
+    <owl:Class rdf:about="&dcat;DataService">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+      <rdfs:subClassOf rdf:resource="&dcat;Resource"/>
+    </owl:Class>
+    
+     <!-- http://www.w3.org/ns/dcat#Resource -->
+
+    <owl:Class rdf:about="&dcat;DataService">
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    </owl:Class>
+
+		<!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="&foaf;Agent">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:equivalentClass rdf:resource="&dct;Agent"/>
+    </owl:Class>
+    
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="&foaf;Document">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:Class rdf:about="&dct;Agent">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/LinguisticSystem -->
+
+    <owl:Class rdf:about="&dct;LinguisticSystem">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/Frequency -->
+
+    <owl:Class rdf:about="&dct;Frequency">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/PeriodOfTime -->
+
+    <owl:Class rdf:about="&dct;PeriodOfTime">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/Location -->
+
+    <owl:Class rdf:about="&dct;Location">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/Standard -->
+
+    <owl:Class rdf:about="&dct;Standard">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="&dct;LicenseDocument">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/dc/terms/MediaTypeOrExtent -->
+
+    <owl:Class rdf:about="&dct;MediaTypeOrExtent">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="&prov;Activity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="&prov;Entity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="&prov;Agent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    </owl:Class>
+    
+    <!-- http://purl.org/linked-data/cube#DimensionProperty -->
+
+    <owl:Class rdf:about="&qb;DimensionProperty">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Class>
+    
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="&rdfs;Resource">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    </owl:Class>
+    
+</rdf:RDF>
