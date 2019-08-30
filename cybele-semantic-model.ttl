@@ -15,7 +15,7 @@
 @base <https://w3id.org/cybele/> .
 
 <https://w3id.org/cybele/> rdf:type owl:Ontology ;
-                            owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.owl> ;
+                            owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.ttl> ;
                             dct:contributor [ schema:affiliation [ foaf:name "UPRC"
                                                                  ] ;
                                               foaf:name "Giorgos Santipantakis"
