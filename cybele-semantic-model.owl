@@ -42,8 +42,8 @@
 
       <!-- end TODO -->
       <dct:title xml:lang="en">CYBELE Semantic Model</dct:title>
-      <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets</rdfs:comment>
       <dct:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model</dct:description>
+      <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. THe model has been implemented by reusing relevant terms from standard and well-known ontologies and vocabularies, including: DCAT, FOAF, PROV-O, Dublin Core, StatDCAT-AP, SKOS and Data Cube</rdfs:comment>
       <foaf:depiction rdf:resource="https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg"/>
         
       <dct:creator>
