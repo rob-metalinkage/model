@@ -34,7 +34,7 @@
      
     <owl:Ontology rdf:about="https://w3id.org/cybele/">
       <!-- TODO: Update on release -->
-      <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/cybele-project/model/master/semantic-model.owl"/>
+      <owl:versionIRI rdf:resource="https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.owl"/>
       
       <owl:versionInfo>1.0</owl:versionInfo>
       <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-30T12:00:00Z</dct:issued>
@@ -44,10 +44,10 @@
       <dc:title xml:lang="en">CYBELE Semantic Model</dc:title>
       <rdfs:comment xml:lang="en">The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets</rdfs:comment>
       <dc:description xml:lang="en">The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather & climate data, supporting the on demand discovery and exploration.  
-      This semantic model will be used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it will be used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence). The semantic annotation of the data will facilitate:
+      This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate:
       i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps.        
-      Additional information about the model is available at https://www.cybele-project.eu/</dc:description>
-      <dc:description rdf:resource="https://github.com/cybele-project/model/blob/master/model_matching.jpg"/>
+      Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model</dc:description>
+      <dc:description rdf:resource="https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg"/>
         
       <dct:creator>
       	<rdf:Description>
