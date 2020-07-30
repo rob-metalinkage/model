@@ -97,24 +97,17 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/contributor
-dct:contributor rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-dct:creator rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/rights
-dct:rights rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/affiliation
@@ -190,6 +183,24 @@ dct:spatial rdf:type owl:ObjectProperty ;
 dct:temporal rdf:type owl:ObjectProperty ;
              rdfs:range dct:PeriodOfTime ;
              rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/accessRights
+dct:accessRights rdf:type owl:ObjectProperty ;
+             rdfs:range dct:RightsStatement ;
+             rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:ObjectProperty ;
+              rdfs:range dct:Agent ;
+              rdfs:isDefinedBy dct: .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:ObjectProperty ;
+              rdfs:range dct:Agent ;
+              rdfs:isDefinedBy dct: .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
@@ -394,6 +405,11 @@ dct:Standard rdf:type owl:Class ;
              rdfs:isDefinedBy dct: .
 
 
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class ;
+             rdfs:isDefinedBy dct: .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
@@ -424,7 +440,8 @@ dcat:Distribution rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/dcat#Resource
-dcat:Resource rdf:type owl:Class .
+dcat:Resource rdf:type owl:Class ;
+							rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
 ###  http://www.w3.org/ns/prov#Entity
