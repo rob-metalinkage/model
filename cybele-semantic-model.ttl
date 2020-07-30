@@ -88,7 +88,7 @@
                             dct:description "The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model"@en ;
                             dct:title "CYBELE Semantic Model"@en ;
                             rdfs:comment "The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. THe model has been implemented by reusing relevant terms from standard and well-known ontologies and vocabularies, including: DCAT, FOAF, PROV-O, Dublin Core, StatDCAT-AP, SKOS and Data Cube"@en ;
-                            foaf:depiction <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/blob/master/images/model_matching.jpg> ;
+                            foaf:depiction <https://gitlab.res.eng.it/cybele/data/cybele-common-semantic-model/-/raw/master/images/model_matching.jpg> ;
                             foaf:maker [ foaf:homepage <https://www.cybele-project.eu/> ;
                                          foaf:name "CYBELE project"
                                        ] .
@@ -108,6 +108,14 @@ dct:title rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/rights
 dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/affiliation
@@ -189,18 +197,6 @@ dct:temporal rdf:type owl:ObjectProperty ;
 dct:accessRights rdf:type owl:ObjectProperty ;
              rdfs:range dct:RightsStatement ;
              rdfs:isDefinedBy dct: .
-
-
-###  http://purl.org/dc/terms/contributor
-dct:contributor rdf:type owl:ObjectProperty ;
-              rdfs:range dct:Agent ;
-              rdfs:isDefinedBy dct: .
-
-
-###  http://purl.org/dc/terms/creator
-dct:creator rdf:type owl:ObjectProperty ;
-              rdfs:range dct:Agent ;
-              rdfs:isDefinedBy dct: .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
