@@ -1,0 +1,100 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cybele:	<http://w3id.org/cybele/model#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:		<http://www.w3.org/ns/dcat#> .
+@prefix xsd:		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:		<http://purl.org/dc/terms/> .
+@prefix qb:			<http://purl.org/linked-data/cube#> .
+@prefix qb4st: 	<http://www.w3.org/ns/qb4st/> .
+#@prefix eg:  	 <http://example.org/ns#> .
+@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-attribute:	<http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+
+
+# --- Dataset ------------------------------------------------------- 								
+<https://w3id.org/cybele/dataset/id/dataset_1> a dcat:Dataset, qb:DataSet; 
+	dct:modified "2020-07-15"^^xsd:date ;
+	dct:issued	"2020-06-15"^^xsd:date ;
+	dct:publisher	<https://w3id.org/cybele/organization/id/Organization_1> ;
+	dct:title	"Test label" ;
+	dct:language	<http://publications.europa.eu/resource/authority/language/ENG> ;
+	dct:temporal	<https://w3id.org/cybele/temporal/id/period_1>;
+	dct:conformsTo	<www.example.com/standard>;
+	dct:spatial	<http://publications.europa.eu/resource/authority/country/GRC> ;
+	dcat:landingPage	<www.example.com/page> ;
+	dcat:spatialResolutionInMeters	10 ;
+	dcat:temporalResolution	"P1D" ;
+	dct:accrualPeriodicity	<http://purl.org/cld/freq/monthly> ;
+	dcat:distribution	<https://w3id.org/cybele/dataset/id/dataset_1/distribution/distribution_1> ;
+	qb:structure <https://w3id.org/cybele/dataset/id/dataset_1/structure/dsd_1>.
+										
+<https://w3id.org/cybele/temporal/id/period_1>	a dct:PeriodOfTime ;
+	dcat:endDate "2020-01-01"^^xsd:date ;
+	dcat:startDate "2010-01-01"^^xsd:date .
+
+# --- Distribution ---------------------------------------------								
+<https://w3id.org/cybele/dataset/id/dataset_1/distribution/distribution_1> a dcat:Distribution ;
+	dct:license <http://publications.europa.eu/resource/authority/licence/CC_BYND>;
+	dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+	cybele:accessDatabase <https://w3id.org/cybele/database/id/DB_1>;
+	dcat:byteSize "20".
+
+<https://w3id.org/cybele/database/id/DB_1> a cybele:Database;
+	rdfs:label "CYBELE DB" ;
+	cybele:connectionString	"jdbc:leanxcale://127.0.0.1:1529/CYBELE;user=test";
+	cybele:accessTable <https://w3id.org/cybele/database/id/DB_1/table/table_1>.
+											
+<https://w3id.org/cybele/database/id/DB_1/table/table_1> a cybele:Table;
+	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_1> ;
+	cybele:tableName "testTable" .
+
+# --- Dataset structure ---------------------------------------	
+<https://w3id.org/cybele/dataset/id/dataset_1/structure/dsd_1> a qb:DataStructureDefinition;
+	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/latitude>];
+	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/longitude>];
+	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/date>];
+	qb:component [ qb:measure <https://w3id.org/cybele/measure/averageWindSpeed>];
+	qb:component [ qb:measure <https://w3id.org/cybele/measure/averageAirTemperature>];	
+	qb:component [ qb:attribute sdmx-attribute:unitMeasure; 
+				   qb:componentAttachment qb:MeasureProperty ] .
+				   
+<https://w3id.org/cybele/dimension/latitude> a qb4st:SpatialDimension, qb:DimensionProperty, rdf:Property  ;
+		rdfs:subPropertyOf geo:lat;
+    rdfs:label "Latitude" ;
+		rdfs:range xsd:double;
+    rdfs:comment "The geographical latitude" ;
+    qb4st:crs <http://epsg.io/4326> ;
+    qb4st:crslabel "WGS84" .
+	
+<https://w3id.org/cybele/dimension/longitude> a qb4st:SpatialDimension, qb:DimensionProperty, rdf:Property  ;
+		rdfs:subPropertyOf geo:long;
+    rdfs:label "Longitude" ;
+		rdfs:range xsd:double;
+    rdfs:comment "The geographical longitude" ;
+    qb4st:crs <http://epsg.io/4326> ;
+    qb4st:crslabel "WGS84" .
+
+<https://w3id.org/cybele/dimension/date> a qb:DimensionProperty, rdf:Property ;
+    rdfs:subPropertyOf sdmx-dimension:timePeriod;
+		rdfs:label "Date";
+		rdfs:range xsd:date;
+		rdfs:comment "The full date" ;
+		qb:concept sdmx-concept:timePeriod .
+
+<https://w3id.org/cybele/measure/averageWindSpeed> a qb:MeasureProperty, rdf:Property  ;
+	  rdfs:subPropertyOf sdmx-measure:obsValue;
+    sdmx-attribute:unitMeasure unit:M-PER-SEC;
+    rdfs:label "Wind speed" ;
+		rdfs:range xsd:double;
+    rdfs:comment "The average wind speed in meter per second".
+	
+<https://w3id.org/cybele/measure/averageAirTemperature> a qb:MeasureProperty, rdf:Property  ;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    sdmx-attribute:unitMeasure unit:DEG_C;
+    rdfs:label "Average air temperature" ;
+		rdfs:range xsd:double;
+    rdfs:comment "The average air temperature in Degree Celsius".

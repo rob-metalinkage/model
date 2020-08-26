@@ -1,0 +1,49 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cybele:	<http://w3id.org/cybele/model#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:		<http://www.w3.org/ns/dcat#> .
+@prefix xsd:		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:		<http://purl.org/dc/terms/> .
+@prefix qb:			<http://purl.org/linked-data/cube#> .
+@prefix qb4st: 	<http://www.w3.org/ns/qb4st/> .
+#@prefix eg:  	 <http://example.org/ns#> .
+@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix locn: 	<http://www.w3.org/ns/locn#> .
+@prefix geosparql: 	<http://www.opengis.net/ont/geosparql#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-attribute:	<http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+
+
+# --- Dataset ------------------------------------------------------- 								
+<https://w3id.org/cybele/dataset/id/dataset_3> a dcat:Dataset, qb:DataSet; 
+	dct:modified "2020-07-15"^^xsd:date ;
+	dct:issued	"2020-06-15"^^xsd:date ;
+	dct:publisher	<https://w3id.org/cybele/organization/id/Organization_2> ;
+	dct:title	"Test label3" ;
+	dct:language	<http://publications.europa.eu/resource/authority/language/ENG> ;
+	dct:temporal	<https://w3id.org/cybele/temporal/id/period_3>;
+	dct:conformsTo	<www.example.com/standard>;
+	dct:spatial	<https://w3id.org/cybele/dataset/id/dataset_3/spatial/1> ;
+	dcat:landingPage	<www.example.com/page> ;
+	dcat:spatialResolutionInMeters	10 ;
+	dcat:temporalResolution	"P1D" ;
+	dct:accrualPeriodicity	<http://purl.org/cld/freq/monthly> .
+										
+<https://w3id.org/cybele/temporal/id/period_3>	a dct:PeriodOfTime ;
+	dcat:endDate "2020-01-01"^^xsd:date ;
+	dcat:startDate "2010-01-01"^^xsd:date .
+
+<https://w3id.org/cybele/dataset/id/dataset_3/spatial/1> a dct:Location ;
+    locn:geometry """POLYGON ((
+      4.8842353 52.375108 , 4.884276 52.375153 ,
+      4.8842567 52.375159 , 4.883981 52.375254 ,
+      4.8838502 52.375109 , 4.883819 52.375075 ,
+      4.8841037 52.374979 , 4.884143 52.374965 ,
+      4.8842069 52.375035 , 4.884263 52.375016 ,
+      4.8843200 52.374996 , 4.884255 52.374926 ,
+      4.8843289 52.374901 , 4.884451 52.375034 ,
+      4.8842353 52.375108
+    ))"""^^geosparql:asWKT .
