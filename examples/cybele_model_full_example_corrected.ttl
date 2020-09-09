@@ -33,8 +33,8 @@
 	qb:structure <https://w3id.org/cybele/dataset/id/dataset_1/structure/dsd_1>.
 										
 <https://w3id.org/cybele/temporal/id/period_1>	a dct:PeriodOfTime ;
-	dcat:endDate "2020-01-01"^^xsd:date ;
-	dcat:startDate "2010-01-01"^^xsd:date .
+	dcat:endDate "2020-01-01T00:00:00"^^xsd:dateTime ;
+	dcat:startDate "2010-01-01T00:00:00"^^xsd:dateTime .
 
 # --- Distribution ---------------------------------------------								
 <https://w3id.org/cybele/dataset/id/dataset_1/distribution/distribution_1> a dcat:Distribution ;
@@ -54,18 +54,37 @@
 
 # --- Dataset structure ---------------------------------------	
 <https://w3id.org/cybele/dataset/id/dataset_1/structure/dsd_1> a qb:DataStructureDefinition;
-	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/latitude>];
-	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/longitude>];
-	qb:component [ qb:dimension <https://w3id.org/cybele/dimension/date>];
-	qb:component [ qb:measure <https://w3id.org/cybele/measure/averageWindSpeed>];
-	qb:component [ qb:measure <https://w3id.org/cybele/measure/averageAirTemperature>];	
-	qb:component [ qb:attribute sdmx-attribute:unitMeasure; 
-				   qb:componentAttachment qb:MeasureProperty ] .
+	qb:component 
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_1>, 
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_2>,
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_3>,
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_4>,
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_5>,
+	<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_6> .		   
+
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_1> a qb:ComponentSpecification;
+	qb:dimension <https://w3id.org/cybele/dimension/latitude> .
+
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_2> a qb:ComponentSpecification;
+	qb:dimension <https://w3id.org/cybele/dimension/longitude> .
+	
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_3> a qb:ComponentSpecification;
+	qb:dimension <https://w3id.org/cybele/dimension/date> .
+	
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_4> a qb:ComponentSpecification;
+	qb:measure <https://w3id.org/cybele/measure/averageWindSpeed> .
+	
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_5> a qb:ComponentSpecification;
+	qb:measure <https://w3id.org/cybele/measure/averageAirTemperature> .
+	
+<https://w3id.org/cybele/dataset/id/dataset_1/componentSpecification/cs_6> a qb:ComponentSpecification;
+	qb:attribute sdmx-attribute:unitMeasure; 
+	qb:componentAttachment qb:MeasureProperty .
 				   
 <https://w3id.org/cybele/dimension/latitude> a qb4st:SpatialDimension, qb:DimensionProperty, rdf:Property  ;
 		rdfs:subPropertyOf geo:lat;
     rdfs:label "Latitude" ;
-		rdfs:range xsd:double;
+		rdfs:range xsd:decimal;
     rdfs:comment "The geographical latitude" ;
     qb4st:crs <http://epsg.io/4326> ;
     qb4st:crslabel "WGS84" .
@@ -73,7 +92,7 @@
 <https://w3id.org/cybele/dimension/longitude> a qb4st:SpatialDimension, qb:DimensionProperty, rdf:Property  ;
 		rdfs:subPropertyOf geo:long;
     rdfs:label "Longitude" ;
-		rdfs:range xsd:double;
+		rdfs:range xsd:decimal;
     rdfs:comment "The geographical longitude" ;
     qb4st:crs <http://epsg.io/4326> ;
     qb4st:crslabel "WGS84" .

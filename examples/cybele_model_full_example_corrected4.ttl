@@ -53,7 +53,7 @@
 											
 <https://w3id.org/cybele/database/id/DB_4/table/table_1> a cybele:Table;
 	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_4> ;
-	cybele:tableName "testTable" .
+	cybele:tableName "testTable1" .
 	
 <https://w3id.org/cybele/database/id/DB_4/table/table_2> a cybele:Table;
 	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_4> ;
