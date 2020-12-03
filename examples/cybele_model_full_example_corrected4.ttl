@@ -20,15 +20,15 @@
 
 # --- Dataset ------------------------------------------------------- 								
 <https://w3id.org/cybele/dataset/id/dataset_4> a dcat:Dataset, qb:DataSet; 
-	dct:modified "2020-07-15"^^xsd:date ;
-	dct:issued	"2020-06-15"^^xsd:date ;
+	dct:modified "2020-10-10"^^xsd:date ;
+	dct:issued	"2020-09-10"^^xsd:date ;
 	dct:publisher	<https://w3id.org/cybele/organization/id/Organization_2> ;
-	dct:title	"Test label" ;
+	dct:title	"Dataset 4" ;
 	dct:language	<http://publications.europa.eu/resource/authority/language/ENG> ;
 	dct:temporal	<https://w3id.org/cybele/temporal/id/period_4>;
-	dct:conformsTo	<www.example.com/standard>;
+	dct:conformsTo	<http://www.example.com/standard>;
 	dct:spatial	<https://w3id.org/cybele/dataset/id/dataset_4/spatial/1> ;
-	dcat:landingPage	<www.example.com/page> ;
+	dcat:landingPage	<http://www.example.com/page> ;
 	dcat:spatialResolutionInMeters	10 ;
 	dcat:temporalResolution	"P1D" ;
 	dct:accrualPeriodicity	<http://purl.org/cld/freq/monthly> ;
@@ -36,8 +36,8 @@
 	qb:structure <https://w3id.org/cybele/dataset/id/dataset_4/structure/dsd_1>.
 										
 <https://w3id.org/cybele/temporal/id/period_4>	a dct:PeriodOfTime ;
-	dcat:endDate "2020-01-01T00:00:00"^^xsd:dateTime ;
-	dcat:startDate "2010-01-01T00:00:00"^^xsd:dateTime .
+	dcat:endDate "2020-06-01T00:00:00"^^xsd:dateTime ;
+	dcat:startDate "2015-06-01T00:00:00"^^xsd:dateTime .
 
 # --- Distribution ---------------------------------------------								
 <https://w3id.org/cybele/dataset/id/dataset_4/distribution/distribution_1> a dcat:Distribution ;
@@ -47,17 +47,17 @@
 	dcat:byteSize "20".
 
 <https://w3id.org/cybele/database/id/DB_4> a cybele:Database;
-	rdfs:label "CYBELE DB" ;
+	rdfs:label "CYBELE DB4" ;
 	cybele:connectionString	"jdbc:leanxcale://127.0.0.1:1529/CYBELE;user=test";
 	cybele:accessTable <https://w3id.org/cybele/database/id/DB_4/table/table_1> , <https://w3id.org/cybele/database/id/DB_4/table/table_2> .
 											
 <https://w3id.org/cybele/database/id/DB_4/table/table_1> a cybele:Table;
 	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_4> ;
-	cybele:tableName "testTable1" .
+	cybele:tableName "Table1" .
 	
 <https://w3id.org/cybele/database/id/DB_4/table/table_2> a cybele:Table;
 	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_4> ;
-	cybele:tableName "testTable2" .	
+	cybele:tableName "Table2" .	
 
 # --- Dataset structure ---------------------------------------	
 <https://w3id.org/cybele/dataset/id/dataset_4/structure/dsd_1> a qb:DataStructureDefinition;

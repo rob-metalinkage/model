@@ -20,12 +20,12 @@
 	dct:modified "2020-07-15"^^xsd:date ;
 	dct:issued	"2020-06-15"^^xsd:date ;
 	dct:publisher	<https://w3id.org/cybele/organization/id/Organization_1> ;
-	dct:title	"Test label" ;
+	dct:title	"My first dataset" ;
 	dct:language	<http://publications.europa.eu/resource/authority/language/ENG> ;
 	dct:temporal	<https://w3id.org/cybele/temporal/id/period_1>;
-	dct:conformsTo	<www.example.com/standard>;
+	dct:conformsTo	<http://www.example.com/standard>;
 	dct:spatial	<http://publications.europa.eu/resource/authority/country/GRC> ;
-	dcat:landingPage	<www.example.com/page> ;
+	dcat:landingPage	<http://www.example.com/page> ;
 	dcat:spatialResolutionInMeters	10 ;
 	dcat:temporalResolution	"P1D" ;
 	dct:accrualPeriodicity	<http://purl.org/cld/freq/monthly> ;
@@ -44,13 +44,13 @@
 	dcat:byteSize "20".
 
 <https://w3id.org/cybele/database/id/DB_1> a cybele:Database;
-	rdfs:label "CYBELE DB" ;
+	rdfs:label "CYBELE DB1" ;
 	cybele:connectionString	"jdbc:leanxcale://127.0.0.1:1529/CYBELE;user=test";
 	cybele:accessTable <https://w3id.org/cybele/database/id/DB_1/table/table_1>.
 											
 <https://w3id.org/cybele/database/id/DB_1/table/table_1> a cybele:Table;
 	dct:subject	<https://w3id.org/cybele/dataset/id/dataset_1> ;
-	cybele:tableName "testTable" .
+	cybele:tableName "MyTable" .
 
 # --- Dataset structure ---------------------------------------	
 <https://w3id.org/cybele/dataset/id/dataset_1/structure/dsd_1> a qb:DataStructureDefinition;
