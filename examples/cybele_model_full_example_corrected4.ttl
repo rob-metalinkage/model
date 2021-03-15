@@ -24,6 +24,7 @@
 	dct:issued	"2020-09-10"^^xsd:date ;
 	dct:publisher	<https://w3id.org/cybele/organization/id/Organization_2> ;
 	dct:title	"Dataset 4" ;
+	dct:description	"Dataset 4 description" ;
 	dct:language	<http://publications.europa.eu/resource/authority/language/ENG> ;
 	dct:temporal	<https://w3id.org/cybele/temporal/id/period_4>;
 	dct:conformsTo	<http://www.example.com/standard>;
