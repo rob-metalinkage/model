@@ -1,0 +1,4 @@
+<https://w3id.org/cybele/testbed1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/cybele/testbed1> <http://www.w3.org/2000/01/rdf-schema#label> "Testbed 1" .
+<https://w3id.org/cybele/testbed1> <http://www.w3.org/ns/dcat#dataset> <https://w3id.org/cybele/testbed1/dataset/id/dataset_1> .
+<https://w3id.org/cybele/testbed1> <http://www.w3.org/ns/dcat#dataset> <https://w3id.org/cybele/testbed1/dataset/id/dataset_4> .
