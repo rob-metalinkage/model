@@ -1,0 +1,59 @@
+# baseURI: http://data.europa.eu/m8g
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix profrole: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://data.europa.eu/m8g> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            rdfs:comment "This is a URI to a general library of ontologies - available as a zip file - stat.ttl is extracted from this - ref should be updated";
+            prof:hasArtifact "lib/stat.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://purl.org/dc/terms> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/dcterms.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://purl.org/linked-data/cube> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/cube.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://www.w3.org/2004/02/skos/core> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/skos.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://www.w3.org/ns/dcat> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/dcat.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://www.w3.org/ns/prov> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/prov.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+<http://xmlns.com/foaf/0.1> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#Ontology> ;
+            prof:hasArtifact "cache/foaf.ttl" ;
+            dcterms:format "text/turtle" ;
+            prof:hasRole profrole:cachedCopy ] .
+
+
+

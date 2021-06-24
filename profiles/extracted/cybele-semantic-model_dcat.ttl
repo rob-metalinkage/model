@@ -1,0 +1,78 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcat:Catalog a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf dcat:Dataset .
+
+dcat:accessService a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range dcat:DataService .
+
+dcat:byteSize a owl:DatatypeProperty ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Literal .
+
+dcat:downloadURL a owl:ObjectProperty ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Resource .
+
+dcat:endpointURL a owl:ObjectProperty ;
+    rdfs:domain dcat:DataService ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Resource .
+
+dcat:landingPage a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range <http://xmlns.com/foaf/0.1/Document> .
+
+dcat:mediaType a owl:ObjectProperty ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range dcterms:MediaType .
+
+dcat:spatialResolutionInMeters a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range xsd:decimal .
+
+dcat:temporalResolution a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range xsd:duration .
+
+<https://w3id.org/cybele/model/proxy/dcat> a owl:Ontology,
+        prov:Entity ;
+    prov:wasDerivedFrom [ a prov:Entity ;
+            rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\cybele-semantic-model.ttl" ] ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+            prov:endedAtTime "2021-06-24"^^xsd:date ;
+            prov:wasAssociatedWith [ a prov:Agent ;
+                    rdfs:label "ProfileWiz 0.1.5" ] ] .
+
+dcat:Dataset a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dcat:theme ],
+        dcat:Resource .
+
+dcat:theme a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> .
+
+dcat:DataService a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf dcat:Resource .
+
+dcat:Resource a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
+dcat:Distribution a owl:Class ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+

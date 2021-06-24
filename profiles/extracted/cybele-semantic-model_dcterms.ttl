@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:Agent a owl:Class ;
+    rdfs:isDefinedBy dcterms: ;
+    owl:equivalentClass <http://xmlns.com/foaf/0.1/Agent> .
+
+dcterms:MediaType a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:accessRights a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:RightsStatement .
+
+dcterms:accrualPeriodicity a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:Frequency .
+
+dcterms:conformsTo a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:Standard .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range rdfs:Literal .
+
+dcterms:issued a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range rdfs:Literal .
+
+dcterms:language a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:LinguisticSystem .
+
+dcterms:license a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:LicenseDocument .
+
+dcterms:modified a owl:DatatypeProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range rdfs:Literal .
+
+dcterms:publisher a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
+
+dcterms:spatial a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:Location .
+
+dcterms:temporal a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:PeriodOfTime .
+
+<https://w3id.org/cybele/model/proxy/dcterms> a owl:Ontology,
+        prov:Entity ;
+    prov:wasDerivedFrom [ a prov:Entity ;
+            rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\cybele-semantic-model.ttl" ] ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+            prov:endedAtTime "2021-06-24"^^xsd:date ;
+            prov:wasAssociatedWith [ a prov:Agent ;
+                    rdfs:label "ProfileWiz 0.1.5" ] ] .
+
+dcterms:Frequency a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:LicenseDocument a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:LinguisticSystem a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:Location a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:PeriodOfTime a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:RightsStatement a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+
+dcterms:Standard a owl:Class ;
+    rdfs:isDefinedBy dcterms: .
+

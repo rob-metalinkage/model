@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+prov:actedOnBehalfOf a owl:ObjectProperty ;
+    rdfs:domain prov:Agent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent .
+
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:domain prov:Activity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Activity .
+
+<https://w3id.org/cybele/model/proxy/prov> a owl:Ontology,
+        prov:Entity ;
+    prov:wasDerivedFrom [ a prov:Entity ;
+            rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\cybele-semantic-model.ttl" ] ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+            prov:endedAtTime "2021-06-24"^^xsd:date ;
+            prov:wasAssociatedWith [ a prov:Agent ;
+                    rdfs:label "ProfileWiz 0.1.5" ] ] .
+
+prov:Activity a owl:Class ;
+    rdfs:isDefinedBy prov: .
+
+prov:Entity a owl:Class ;
+    rdfs:isDefinedBy prov: .
+
+prov:Agent a owl:Class ;
+    rdfs:isDefinedBy prov: .
+

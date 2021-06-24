@@ -1,0 +1,14 @@
+{
+    "@id": "http://w3id.org/cybele/model_profile4foaf",
+    "@context": [
+        {
+            "@vocab": "http://w3id.org/cybele/model_profile4foaf",
+            "Document": {
+                "@id": "foaf:Document"
+            },
+            "Agent": {
+                "@id": "foaf:Agent"
+            }
+        }
+    ]
+}

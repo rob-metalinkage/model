@@ -1,0 +1,39 @@
+{
+    "@id": "http://w3id.org/cybele/model_profile4cube",
+    "@context": [
+        {
+            "@vocab": "http://w3id.org/cybele/model_profile4cube",
+            "DataStructureDefinition": {
+                "@id": "qb:DataStructureDefinition"
+            },
+            "ComponentSpecification": {
+                "@id": "qb:ComponentSpecification"
+            },
+            "DataSet": {
+                "@id": "qb:DataSet"
+            },
+            "MeasureProperty": {
+                "@id": "qb:MeasureProperty"
+            },
+            "DimensionProperty": {
+                "@id": "qb:DimensionProperty"
+            },
+            "measure": {
+                "@id": "qb:measure",
+                "@type": "@id"
+            },
+            "dimension": {
+                "@id": "qb:dimension",
+                "@type": "@id"
+            },
+            "component": {
+                "@id": "qb:component",
+                "@type": "@id"
+            },
+            "structure": {
+                "@id": "qb:structure",
+                "@type": "@id"
+            }
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "@id": "http://w3id.org/cybele/model_profile4prov",
+    "@context": [
+        {
+            "@vocab": "http://w3id.org/cybele/model_profile4prov",
+            "Activity": {
+                "@id": "prov:Activity"
+            },
+            "Entity": {
+                "@id": "prov:Entity"
+            },
+            "Agent": {
+                "@id": "prov:Agent"
+            },
+            "wasGeneratedBy": {
+                "@id": "prov:wasGeneratedBy",
+                "@type": "@id"
+            },
+            "wasAttributedTo": {
+                "@id": "prov:wasAttributedTo",
+                "@type": "@id"
+            },
+            "wasAssociatedWith": {
+                "@id": "prov:wasAssociatedWith",
+                "@type": "@id"
+            },
+            "actedOnBehalfOf": {
+                "@id": "prov:actedOnBehalfOf",
+                "@type": "@id"
+            }
+        }
+    ]
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CYBELE Semantic Model</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+        /* highlight imported definition */
+        .importeddef { background: #B88 }
+
+        /* highlight alignment */
+        .highlight-alignment { background: #8B8 }
+    </style>
+    
+    <script type="application/ld+json">
+      b'[\n  {\n    "@id": "http://w3id.org/cybele/model",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "None"\n      }\n    ]\n  }\n]'
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.4</span>
+  </div>
+  <h1>CYBELE Semantic Model</h1>
+<h3><em>A Profile</em></h3>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>http://w3id.org/cybele/model</code></dd>
+        
+        <dt><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Is Profile Of</a></dt>
+        <dd>
+            <a href="https://w3id.org/cybele/model/proxy/cube">https://w3id.org/cybele/model/proxy/cube</a><br/>
+            <a href="https://w3id.org/cybele/model/proxy/dcterms">https://w3id.org/cybele/model/proxy/dcterms</a><br/>
+            <a href="https://w3id.org/cybele/model/proxy/skos">https://w3id.org/cybele/model/proxy/skos</a><br/>
+            <a href="https://w3id.org/cybele/model/proxy/foaf">https://w3id.org/cybele/model/proxy/foaf</a><br/>
+            <a href="https://w3id.org/cybele/model/proxy/prov">https://w3id.org/cybele/model/proxy/prov</a><br/>
+            <a href="https://w3id.org/cybele/model/proxy/dcat">https://w3id.org/cybele/model/proxy/dcat</a><br/>
+        </dd>
+        
+        
+        <dt><a href="https://www.w3.org/TR/dx-prof/#Property:isTransitiveProfileOf">Is Transitive Profile Of</a></dt>
+        <dd>
+            <a href="http://xmlns.com/foaf/0.1">http://xmlns.com/foaf/0.1</a><br/>
+            <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a><br/>
+            <a href="http://www.w3.org/ns/dcat">http://www.w3.org/ns/dcat</a><br/>
+            <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a><br/>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
+            <a href="http://purl.org/linked-data/cube">http://purl.org/linked-data/cube</a><br/>
+        </dd>
+        
+        <dt>Profile RDF</dt>
+        <dd><a href="input.ttl">RDF (turtle)</a></dd>
+    </dl>
+      <dt><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Has Resource Descriptor(s)</a></dt>
+    <dd>
+          <a href="#N122f41d769dc43c59e4999f0a84697d9">Original Source OWL model</a><br/>
+          <a href="#N3f107add282b4d76a5217ddf4465b5f5">OWL with definition details from imports</a><br/>
+          <a href="#N636a1a6ba2164bdf966a5ede58b5958f">Normalised OWL with imports</a><br/>
+          <a href="#N6d7df28688af4220836f9d6ee24d686b">Flattened JSON-LD context</a><br/>
+          <a href="#N78459a805d3d4fa098b046c69f75172d">Profile description as HTML</a><br/>
+          <a href="#N7f80a6bb62f543b1980b44e716f94f65">OWL documentation as HTML</a><br/>
+          <a href="#Na3f36428b2144720bf7a5826f72b47a2">Normalised OWL with imports</a><br/>
+          <a href="#Nac7c6b3296fa47a78c05d7bfdc829a8c">JSON-LD Context - local file link</a><br/>
+          <a href="#Nc1c18e4a5b944fd1b451609098e83e08">OWL with definition details from imports</a><br/>
+          <a href="#Nd7723b0692a64c62abc7a1eb5337ba76">Profile description as HTML</a><br/>
+          <a href="#Nd80537b7dd0b4824b609ecc08456f3e6">JSON-LD Context</a><br/>
+          <a href="#Nfe28304e07534b32817cbdd99fa6e190">JSON Schema</a><br/>
+    </dd>
+    <h2>Description</h2>
+    <div id="comment">
+        <p>The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model</p>
+    </div>
+</section>
+  <section id="resource_descriptors">
+      <h2>Resource Descriptors</h2>
+  
+  
+  
+  
+  
+      <div class="entity resource_descriptor" id="N122f41d769dc43c59e4999f0a84697d9">
+    <h3>Original Source OWL model</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Source OWL model used to derive normalised profile views.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="../cybele-semantic-model.ttl">../cybele-semantic-model.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N3f107add282b4d76a5217ddf4465b5f5">
+    <h3>OWL with definition details from imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is a OWL file containing all the properties of objects used by the profile in a single (flat) denormalised file. This may be augmented in future with RDF* or reified statements with the provenance of each statement if required.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_flat.jsonld">cybele-semantic-model_flat.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N636a1a6ba2164bdf966a5ede58b5958f">
+    <h3>Normalised OWL with imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model.ttl">cybele-semantic-model.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N6d7df28688af4220836f9d6ee24d686b">
+    <h3>Flattened JSON-LD context</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_context_flat.jsonld">cybele-semantic-model_context_flat.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/contextflat">profrole:contextflat</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N78459a805d3d4fa098b046c69f75172d">
+    <h3>Profile description as HTML</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Original source OWL file as HTML - for comparison and review purposes</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_source.html">cybele-semantic-model_source.html</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N7f80a6bb62f543b1980b44e716f94f65">
+    <h3>OWL documentation as HTML</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Based on the OWL flat view of the profile, a HTML rendering of key elements of the model.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model.html">cybele-semantic-model.html</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Na3f36428b2144720bf7a5826f72b47a2">
+    <h3>Normalised OWL with imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model.jsonld">cybele-semantic-model.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nac7c6b3296fa47a78c05d7bfdc829a8c">
+    <h3>JSON-LD Context - local file link</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_context.jsonld">cybele-semantic-model_context.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nc1c18e4a5b944fd1b451609098e83e08">
+    <h3>OWL with definition details from imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is a OWL file containing all the properties of objects used by the profile in a single (flat) denormalised file. This may be augmented in future with RDF* or reified statements with the provenance of each statement if required.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_flat.ttl">cybele-semantic-model_flat.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nd7723b0692a64c62abc7a1eb5337ba76">
+    <h3>Profile description as HTML</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Overview of profile and available descriptive and implementation support resources</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model_prof.html">cybele-semantic-model_prof.html</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nd80537b7dd0b4824b609ecc08456f3e6">
+    <h3>JSON-LD Context</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="http://w3id.org/cybele/model?_profile=jsoncontext">http://w3id.org/cybele/model?_profile=jsoncontext</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/context">profrole:context</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nfe28304e07534b32817cbdd99fa6e190">
+    <h3>JSON Schema</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cybele-semantic-model.json">cybele-semantic-model.json</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+  </section>
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>profrole</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/role/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+</body>
+</html>

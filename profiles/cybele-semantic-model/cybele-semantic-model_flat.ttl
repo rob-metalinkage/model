@@ -1,0 +1,709 @@
+@prefix cybele: <http://w3id.org/cybele/model#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns2: <http://purl.org/dc/dcam/> .
+@prefix ns3: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dct:Agent a dct:AgentClass,
+        rdfs:Class,
+        owl:Class ;
+    rdfs:label "Agent"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A resource that acts or has the power to act."@en ;
+    rdfs:isDefinedBy dct: ;
+    owl:equivalentClass foaf:Agent .
+
+dct:Frequency a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Frequency"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A rate at which something recurs."@en ;
+    rdfs:isDefinedBy dct: .
+
+dct:LicenseDocument a rdfs:Class,
+        owl:Class ;
+    rdfs:label "License Document"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A legal document giving official permission to do something with a resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:subClassOf dct:RightsStatement .
+
+dct:LinguisticSystem a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Linguistic System"@en ;
+    dct:description "Written, spoken, sign, and computer languages are linguistic systems."@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
+    rdfs:isDefinedBy dct: .
+
+dct:Location a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Location"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A spatial region or named place."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:subClassOf dct:LocationPeriodOrJurisdiction .
+
+dct:MediaType a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Media Type"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A file format or physical medium."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:subClassOf dct:MediaTypeOrExtent .
+
+dct:PeriodOfTime a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Period of Time"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "An interval of time that is named or defined by its start and end dates."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:subClassOf dct:LocationPeriodOrJurisdiction .
+
+dct:RightsStatement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Rights Statement"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
+    rdfs:isDefinedBy dct: .
+
+dct:Standard a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Standard"@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A reference point against which other things can be evaluated or compared."@en ;
+    rdfs:isDefinedBy dct: .
+
+qb:ComponentSpecification a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Component specification"@en ;
+    rdfs:comment "Used to define properties of a component (attribute, dimension etc) which are specific to its usage in a DSD."@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:subClassOf qb:ComponentSet .
+
+qb:DataSet a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Data set"@en ;
+    rdfs:comment "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure."@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:subClassOf qb:Attachable ;
+    owl:equivalentClass <http://purl.org/NET/scovo#Dataset>,
+        dcat:Dataset .
+
+qb:DataStructureDefinition a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Data structure definition"@en ;
+    rdfs:comment "Defines the structure of a DataSet or slice"@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:subClassOf qb:ComponentSet .
+
+qb:DimensionProperty a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Dimension property"@en ;
+    rdfs:comment "The class of components which represent the dimensions of the cube"@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:subClassOf qb:CodedProperty,
+        qb:ComponentProperty ;
+    owl:disjointWith qb:MeasureProperty .
+
+qb:MeasureProperty a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Measure property"@en ;
+    rdfs:comment "The class of components which represent the measured value of the phenomenon being observed"@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:subClassOf qb:ComponentProperty ;
+    owl:disjointWith qb:AttributeProperty,
+        qb:DimensionProperty .
+
+dcat:Catalog a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Catalog"@en ;
+    rdfs:comment "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom dcat:Resource ;
+            owl:onProperty dct:hasPart ],
+        dcat:Dataset ;
+    skos:definition "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)."@en ;
+    skos:editorialNote "English, Italian, Spanish definitions updated in this revision. Multilingual text not yet updated."@en ;
+    skos:scopeNote "A web-based data catalog is typically represented as a single instance of this class."@en .
+
+dcat:Dataset a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Dataset"@en ;
+    rdfs:comment "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dcat:theme ],
+        dcat:Resource ;
+    skos:changeNote "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary."@en ;
+    skos:definition "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en ;
+    skos:scopeNote "This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations."@en,
+        "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter."@en .
+
+dcat:Distribution a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Distribution"@en ;
+    rdfs:comment "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    skos:definition "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."@en ;
+    skos:scopeNote "This represents a general availability of a dataset it implies no information about the actual access method of the data, i.e. whether by direct download, API, or through a Web page. The use of dcat:downloadURL property indicates directly downloadable distributions."@en .
+
+foaf:Agent a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+    rdfs:isDefinedBy foaf: ;
+    owl:equivalentClass dct:Agent ;
+    ns3:term_status "stable" .
+
+foaf:Document a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Document" ;
+    rdfs:comment "A document." ;
+    rdfs:isDefinedBy foaf: ;
+    owl:disjointWith foaf:Organization,
+        foaf:Project ;
+    owl:equivalentClass schema:CreativeWork ;
+    ns3:term_status "stable" .
+
+dct:accessRights a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Access Rights"@en ;
+    ns2:rangeIncludes dct:RightsStatement ;
+    dct:description "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en ;
+    dct:issued "2003-02-15"^^xsd:date ;
+    rdfs:comment "Information about who access the resource or an indication of its security status."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:RightsStatement .
+
+dct:accrualPeriodicity a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Accrual Periodicity"@en ;
+    ns2:rangeIncludes dct:Frequency ;
+    dct:description "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]."@en ;
+    dct:issued "2005-06-13"^^xsd:date ;
+    rdfs:comment "The frequency with which items are added to a collection."@en ;
+    rdfs:domain <http://purl.org/dc/dcmitype/Collection> ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:Frequency .
+
+dct:conformsTo a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Conforms To"@en ;
+    ns2:rangeIncludes dct:Standard ;
+    dct:issued "2001-05-21"^^xsd:date ;
+    rdfs:comment "An established standard to which the described resource conforms."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:Standard .
+
+dct:contributor a owl:AnnotationProperty .
+
+dct:creator a owl:AnnotationProperty .
+
+dct:description a owl:AnnotationProperty .
+
+dct:identifier a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "Identifier"@en ;
+    dct:description "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range rdfs:Literal .
+
+dct:issued a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "Date Issued"@en ;
+    dct:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+    dct:issued "2000-07-11"^^xsd:date ;
+    rdfs:comment "Date of formal issuance of the resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range rdfs:Literal .
+
+dct:language a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Language"@en ;
+    ns2:rangeIncludes dct:LinguisticSystem ;
+    dct:description "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "A language of the resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:LinguisticSystem .
+
+dct:license a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "License"@en ;
+    ns2:rangeIncludes dct:LicenseDocument ;
+    dct:description "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
+    dct:issued "2004-06-14"^^xsd:date ;
+    rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:LicenseDocument .
+
+dct:modified a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "Date Modified"@en ;
+    dct:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+    dct:issued "2000-07-11"^^xsd:date ;
+    rdfs:comment "Date on which the resource was changed."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range rdfs:Literal .
+
+dct:publisher a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Publisher"@en ;
+    ns2:rangeIncludes dct:Agent ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    rdfs:comment "An entity responsible for making the resource available."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range foaf:Agent .
+
+dct:rights a owl:AnnotationProperty .
+
+dct:spatial a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Spatial Coverage"@en ;
+    ns2:rangeIncludes dct:Location ;
+    dct:issued "2000-07-11"^^xsd:date ;
+    rdfs:comment "Spatial characteristics of the resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:Location .
+
+dct:temporal a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "Temporal Coverage"@en ;
+    ns2:rangeIncludes dct:PeriodOfTime ;
+    dct:issued "2000-07-11"^^xsd:date ;
+    rdfs:comment "Temporal characteristics of the resource."@en ;
+    rdfs:isDefinedBy dct: ;
+    rdfs:range dct:PeriodOfTime .
+
+dct:title a owl:AnnotationProperty .
+
+qb:component a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "component specification"@en ;
+    rdfs:comment "indicates a component specification which is included in the structure of the dataset"@en ;
+    rdfs:domain qb:DataStructureDefinition ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:range qb:ComponentSpecification .
+
+qb:dimension a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "dimension"@en ;
+    rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a dimension"@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:range qb:DimensionProperty ;
+    rdfs:subPropertyOf qb:componentProperty .
+
+qb:measure a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "measure"@en ;
+    rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a measure"@en ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:range qb:MeasureProperty ;
+    rdfs:subPropertyOf qb:componentProperty .
+
+qb:structure a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "structure"@en ;
+    rdfs:comment "indicates the structure to which this data set conforms"@en ;
+    rdfs:domain qb:DataSet ;
+    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+    rdfs:range qb:DataStructureDefinition .
+
+schema:affiliation a owl:AnnotationProperty .
+
+cybele:accessDatabase a owl:ObjectProperty ;
+    rdfs:label "accessDatabase"@en ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> ;
+    rdfs:range cybele:Database .
+
+cybele:accessTable a owl:ObjectProperty ;
+    rdfs:label "accessTable"@en ;
+    rdfs:domain cybele:Database ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> ;
+    rdfs:range cybele:Table .
+
+cybele:connectionString a owl:DatatypeProperty ;
+    rdfs:label "connectionString"@en ;
+    rdfs:domain cybele:Database ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> ;
+    rdfs:range rdfs:Literal .
+
+cybele:tableName a owl:DatatypeProperty ;
+    rdfs:label "connectionString"@en ;
+    rdfs:domain cybele:Table ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> ;
+    rdfs:range rdfs:Literal .
+
+dcat:accessService a owl:ObjectProperty ;
+    rdfs:label "data access service"@en ;
+    rdfs:comment "A site or end-point that gives access to the distribution of the dataset."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range dcat:DataService ;
+    skos:changeNote "New property added in DCAT 2.0."@en ;
+    skos:definition "A site or end-point that gives access to the distribution of the dataset."@en .
+
+dcat:byteSize a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "byte size"@en ;
+    rdfs:comment "The size of a distribution in bytes."@en ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Literal ;
+    skos:definition "The size of a distribution in bytes."@en ;
+    skos:scopeNote "The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal."@en .
+
+dcat:downloadURL a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "download URL"@en ;
+    rdfs:comment "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Resource ;
+    skos:definition "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+    skos:editorialNote "Status: English  Definition text modified by DCAT revision team, Italian, Spanish and Czech translation updated, other translations pending."@en,
+        "rdfs:label, rdfs:comment and/or skos:scopeNote have been modified. Non-english versions must be updated."@en ;
+    skos:scopeNote "dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request."@en .
+
+dcat:landingPage a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "landing page"@en ;
+    rdfs:comment "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range foaf:Document ;
+    rdfs:subPropertyOf foaf:page ;
+    skos:definition "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
+    skos:scopeNote "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
+
+dcat:mediaType a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "media type"@en ;
+    rdfs:comment "The media type of the distribution as defined by IANA"@en ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range dct:MediaType ;
+    rdfs:subPropertyOf dct:format ;
+    skos:changeNote "The range of dcat:mediaType has been tightened as part of the revision of DCAT."@en ;
+    skos:definition "The media type of the distribution as defined by IANA."@en ;
+    skos:editorialNote "Status: English Definition text modified by DCAT revision team, Italian and Czech translation provided, other translations pending. Note some inconsistency on def vs. usage."@en ;
+    skos:scopeNote "This property SHOULD be used when the media type of the distribution is defined in the IANA media types registry https://www.iana.org/assignments/media-types/, otherwise dct:format MAY be used with different values."@en .
+
+dcat:spatialResolutionInMeters a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range xsd:decimal ;
+    skos:changeNote "New property added in DCAT 2.0."@en ;
+    skos:editorialNote "Might appear in the description of a Dataset or a Distribution, so no domain is specified."@en ;
+    skos:scopeNote "Alternative spatial resolutions might be provided as different dataset distributions."@en,
+        "If the dataset is an image or grid this should correspond to the spacing of items. For other kinds of spatial dataset, this property will usually indicate the smallest distance between items in the dataset."@en .
+
+dcat:temporalResolution a owl:DatatypeProperty ;
+    rdfs:label "temporal resolution"@en ;
+    rdfs:comment "minimum time period resolvable in a dataset."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range xsd:duration ;
+    skos:changeNote "New property added in DCAT 2.0."@en ;
+    skos:definition "minimum time period resolvable in a dataset."@en ;
+    skos:editorialNote "Might appear in the description of a Dataset or a Distribution, so no domain is specified."@en ;
+    skos:scopeNote "Alternative temporal resolutions might be provided as different dataset distributions."@en,
+        "If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset."@en .
+
+prov:actedOnBehalfOf a owl:ObjectProperty ;
+    rdfs:label "actedOnBehalfOf" ;
+    rdfs:comment "An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity. "@en ;
+    rdfs:domain prov:Agent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedDelegation prov:agent ) ;
+    prov:category "starting-point" ;
+    prov:component "agents-responsibility" ;
+    prov:inverse "hadDelegate" ;
+    prov:qualifiedForm prov:Delegation,
+        prov:qualifiedDelegation .
+
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:label "wasAssociatedWith" ;
+    rdfs:comment "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedAssociation prov:agent ) ;
+    prov:category "starting-point" ;
+    prov:component "agents-responsibility" ;
+    prov:inverse "wasAssociateFor" ;
+    prov:qualifiedForm prov:Association,
+        prov:qualifiedAssociation .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "wasAttributedTo" ;
+    rdfs:comment "Attribution is the ascribing of an entity to an agent."@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedAttribution prov:agent ) ;
+    prov:category "starting-point" ;
+    prov:component "agents-responsibility" ;
+    prov:definition "Attribution is the ascribing of an entity to an agent."@en ;
+    prov:inverse "contributed" ;
+    prov:qualifiedForm prov:Attribution,
+        prov:qualifiedAttribution .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:label "wasGeneratedBy" ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy prov:,
+        <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Activity ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:inverseOf prov:generated ;
+    owl:propertyChainAxiom ( prov:qualifiedGeneration prov:activity ) ;
+    prov:category "starting-point" ;
+    prov:component "entities-activities" ;
+    prov:inverse "generated" ;
+    prov:qualifiedForm prov:Generation,
+        prov:qualifiedGeneration .
+
+foaf:depiction a owl:AnnotationProperty .
+
+foaf:homepage a owl:AnnotationProperty .
+
+foaf:maker a owl:AnnotationProperty .
+
+foaf:name a owl:AnnotationProperty .
+
+<http://creativecommons.org/licenses/by/4.0/> a owl:NamedIndividual .
+
+xsd:duration a rdfs:Datatype .
+
+skos:Concept a owl:Class ;
+    rdfs:label "Concept",
+        "Concept"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    skos:definition "An idea or notion; a unit of thought."@en .
+
+dcat:endpointURL a owl:ObjectProperty ;
+    rdfs:label "service end-point"@en ;
+    rdfs:comment "The root location or primary endpoint of the service (a web-resolvable IRI)."@en ;
+    rdfs:domain dcat:DataService ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range rdfs:Resource ;
+    skos:changeNote "New property in DCAT 2.0."@en ;
+    skos:definition "The root location or primary endpoint of the service (a web-resolvable IRI)."@en .
+
+dcat:theme a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "theme"@en ;
+    rdfs:comment "A main category of the resource. A resource can have multiple themes."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:range skos:Concept ;
+    rdfs:subPropertyOf dct:subject ;
+    skos:definition "A main category of the resource. A resource can have multiple themes."@en ;
+    skos:editorialNote "Status: English Definition text modified by DCAT revision team, all except for Italian and Czech translations are pending."@en ;
+    skos:scopeNote "The set of skos:Concepts used to categorize the resources are organized in a skos:ConceptScheme describing all the categories and their relations in the catalog."@en .
+
+cybele:Table a owl:Class ;
+    rdfs:label "Table"@en ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> .
+
+dcat:DataService a owl:Class ;
+    rdfs:label "Data service"@en ;
+    rdfs:comment "A site or end-point providing operations related to the discovery of, access to, or processing functions on, data or related resources."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dcat:endpointURL ],
+        <http://purl.org/dc/dcmitype/Service>,
+        dcat:Resource ;
+    skos:changeNote "New class added in DCAT 2.0."@en ;
+    skos:definition "A site or end-point providing operations related to the discovery of, access to, or processing functions on, data or related resources."@en ;
+    skos:scopeNote "If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property."@en,
+        "The kind of service can be indicated using the dct:type property. Its value may be taken from a controlled vocabulary such as the INSPIRE spatial data service type vocabulary."@en .
+
+cybele:Database a owl:Class ;
+    rdfs:label "Database"@en ;
+    rdfs:isDefinedBy <http://w3id.org/cybele/model> .
+
+dcat:Resource a owl:Class ;
+    rdfs:label "Catalogued resource"@en ;
+    rdfs:comment "Resource published or curated by a single agent."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    skos:changeNote "New class added in DCAT 2.0."@en ;
+    skos:definition "Resource published or curated by a single agent."@en ;
+    skos:scopeNote "The class of all catalogued resources, the Superclass of dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog. This class carries properties common to all catalogued resources, including datasets and data services. It is strongly recommended to use a more specific sub-class. When describing a resource which is not a dcat:Dataset or dcat:DataService, it is recommended to create a suitable sub-class of dcat:Resource, or use dcat:Resource with the dct:type property to indicate the specific type."@en,
+        "dcat:Resource is an extension point that enables the definition of any kind of catalog. Additional subclasses may be defined in a DCAT profile or application for catalogs of other kinds of resources."@en .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" ;
+    rdfs:isDefinedBy prov:,
+        <http://www.w3.org/ns/prov-o#> ;
+    owl:disjointWith prov:Entity ;
+    prov:category "starting-point" ;
+    prov:component "entities-activities" ;
+    prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+    prov:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+    prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity"^^xsd:anyURI ;
+    prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"^^xsd:anyURI .
+
+<https://www.cybele-project.eu/> a owl:NamedIndividual .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:isDefinedBy prov:,
+        <http://www.w3.org/ns/prov-o#> ;
+    owl:disjointWith prov:InstantaneousEvent ;
+    prov:category "starting-point" ;
+    prov:component "agents-responsibility" ;
+    prov:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+    prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+    prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
+
+prov:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:isDefinedBy prov:,
+        <http://www.w3.org/ns/prov-o#> ;
+    owl:disjointWith prov:InstantaneousEvent ;
+    prov:category "starting-point" ;
+    prov:component "entities-activities" ;
+    prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+    prov:definition "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. "@en ;
+    prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity"^^xsd:anyURI ;
+    prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity"^^xsd:anyURI .
+
+<http://w3id.org/cybele/model> a owl:Ontology,
+        prov:Entity ;
+    dct:contributor [ schema:affiliation [ foaf:name "EXUS" ] ;
+            foaf:name "Konstantinos Kentrotis" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Dimitris Zeginis" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Tambouris Efthimios" ],
+        [ schema:affiliation [ foaf:name "OGC" ] ;
+            foaf:name "Martin Klopfer" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Areti Karamanou" ],
+        [ schema:affiliation [ foaf:name "EXUS" ] ;
+            foaf:name "Maria Plakia" ],
+        [ schema:affiliation [ foaf:name "OGC" ] ;
+            foaf:name "Ingo Simonis" ],
+        [ schema:affiliation [ foaf:name "ICCS" ] ;
+            foaf:name "Spiros Mouzakitis" ],
+        [ schema:affiliation [ foaf:name "UPRC" ] ;
+            foaf:name "Giorgos Santipantakis" ],
+        [ schema:affiliation [ foaf:name "SUITE5" ] ;
+            foaf:name "Konstantinos Latanis" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Eleni Panopoulou" ],
+        [ schema:affiliation [ foaf:name "WU" ] ;
+            foaf:name "Dilli Paudel" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Evangelos Kalampokis" ],
+        [ schema:affiliation [ foaf:name "CERTH" ] ;
+            foaf:name "Konstantinos Tarabanis" ] ;
+    dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+            rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+            foaf:name "Raul Palma" ] ;
+    dct:description "The CYBELE Semantic Model serves as a common reference model for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather and climate data, supporting the on demand discovery and exploration. This semantic model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it is used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence), which will facilitate: i) the discovery and exploration of the CYBELE datasets; ii) the description of the data needs of CYBELE apps. Additional information about the model is available at https://gitlab.res.eng.it/cybele/cybele-common-semantic-model"@en ;
+    dct:issued "2019-08-30T12:00:00+00:00"^^xsd:dateTime ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:modified "2020-07-30T12:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://www.cybele-project.eu/> ;
+    dct:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
+    dct:title "CYBELE Semantic Model"@en ;
+    rdfs:comment "The CYBELE Semantic Model is used in the semantic annotation, sharing and inter-connection of CYBELE datasets. THe model has been implemented by reusing relevant terms from standard and well-known ontologies and vocabularies, including: DCAT, FOAF, PROV-O, Dublin Core, StatDCAT-AP, SKOS and Data Cube"@en ;
+    owl:imports <http://purl.org/dc/terms>,
+        <http://purl.org/linked-data/cube>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/prov>,
+        <http://xmlns.com/foaf/0.1> ;
+    owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.ttl> ;
+    owl:versionInfo "1.1" ;
+    ns1:isProfileOf <https://w3id.org/cybele/model/proxy/cube>,
+        <https://w3id.org/cybele/model/proxy/dcat>,
+        <https://w3id.org/cybele/model/proxy/dcterms>,
+        <https://w3id.org/cybele/model/proxy/foaf>,
+        <https://w3id.org/cybele/model/proxy/prov>,
+        <https://w3id.org/cybele/model/proxy/skos> ;
+    ns1:isTransitiveProfileOf <http://purl.org/dc/terms>,
+        <http://purl.org/linked-data/cube>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/prov>,
+        <http://xmlns.com/foaf/0.1> ;
+    prov:wasDerivedFrom [ a prov:Entity ;
+            rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\cybele-semantic-model.ttl" ] ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            rdfs:label "ProfileWiz: Normalisation (source = ../cybele-semantic-model.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
+            prov:endedAtTime "2021-06-24"^^xsd:date ;
+            prov:wasAssociatedWith [ a prov:Agent ;
+                    rdfs:label "ProfileWiz 0.1.5" ] ] ;
+    foaf:depiction <https://gitlab.res.eng.it/cybele/data/cybele-common-semantic-model/-/raw/master/images/model_matching.jpg> ;
+    foaf:maker [ foaf:homepage <https://www.cybele-project.eu/> ;
+            foaf:name "CYBELE project" ] .
+
+[] schema:affiliation [ foaf:name "UPRC" ] ;
+    foaf:name "Giorgos Santipantakis" .
+
+[] schema:affiliation [ foaf:name "EXUS" ] ;
+    foaf:name "Maria Plakia" .
+
+[] schema:affiliation [ foaf:name "OGC" ] ;
+    foaf:name "Martin Klopfer" .
+
+[] schema:affiliation [ foaf:name "ICCS" ] ;
+    foaf:name "Spiros Mouzakitis" .
+
+[] schema:affiliation [ foaf:name "PSNC" ] ;
+    rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+    foaf:name "Raul Palma" .
+
+[] foaf:homepage <https://www.cybele-project.eu/> ;
+    foaf:name "CYBELE project" .
+
+[] schema:affiliation [ foaf:name "SUITE5" ] ;
+    foaf:name "Konstantinos Latanis" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Eleni Panopoulou" .
+
+[] schema:affiliation [ foaf:name "WU" ] ;
+    foaf:name "Dilli Paudel" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Evangelos Kalampokis" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Areti Karamanou" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Konstantinos Tarabanis" .
+
+[] schema:affiliation [ foaf:name "EXUS" ] ;
+    foaf:name "Konstantinos Kentrotis" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Dimitris Zeginis" .
+
+[] schema:affiliation [ foaf:name "CERTH" ] ;
+    foaf:name "Tambouris Efthimios" .
+
+[] schema:affiliation [ foaf:name "OGC" ] ;
+    foaf:name "Ingo Simonis" .
+

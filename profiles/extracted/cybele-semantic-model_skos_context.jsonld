@@ -1,0 +1,11 @@
+{
+    "@id": "http://w3id.org/cybele/model_profile4skos",
+    "@context": [
+        {
+            "@vocab": "http://w3id.org/cybele/model_profile4skos",
+            "Concept": {
+                "@id": "skos:Concept"
+            }
+        }
+    ]
+}

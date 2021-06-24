@@ -1,0 +1,79 @@
+{
+    "@id": "http://w3id.org/cybele/model_profile4dcterms",
+    "@context": [
+        {
+            "@vocab": "http://w3id.org/cybele/model_profile4dcterms",
+            "Agent": {
+                "@id": "dcterms:Agent"
+            },
+            "Frequency": {
+                "@id": "dcterms:Frequency"
+            },
+            "RightsStatement": {
+                "@id": "dcterms:RightsStatement"
+            },
+            "Standard": {
+                "@id": "dcterms:Standard"
+            },
+            "MediaType": {
+                "@id": "dcterms:MediaType"
+            },
+            "PeriodOfTime": {
+                "@id": "dcterms:PeriodOfTime"
+            },
+            "Location": {
+                "@id": "dcterms:Location"
+            },
+            "LicenseDocument": {
+                "@id": "dcterms:LicenseDocument"
+            },
+            "LinguisticSystem": {
+                "@id": "dcterms:LinguisticSystem"
+            },
+            "accrualPeriodicity": {
+                "@id": "dcterms:accrualPeriodicity",
+                "@type": "@id"
+            },
+            "publisher": {
+                "@id": "dcterms:publisher",
+                "@type": "@id"
+            },
+            "language": {
+                "@id": "dcterms:language",
+                "@type": "@id"
+            },
+            "conformsTo": {
+                "@id": "dcterms:conformsTo",
+                "@type": "@id"
+            },
+            "accessRights": {
+                "@id": "dcterms:accessRights",
+                "@type": "@id"
+            },
+            "license": {
+                "@id": "dcterms:license",
+                "@type": "@id"
+            },
+            "temporal": {
+                "@id": "dcterms:temporal",
+                "@type": "@id"
+            },
+            "spatial": {
+                "@id": "dcterms:spatial",
+                "@type": "@id"
+            },
+            "identifier": {
+                "@id": "dcterms:identifier",
+                "@type": "rdfs:Literal"
+            },
+            "modified": {
+                "@id": "dcterms:modified",
+                "@type": "rdfs:Literal"
+            },
+            "issued": {
+                "@id": "dcterms:issued",
+                "@type": "rdfs:Literal"
+            }
+        }
+    ]
+}

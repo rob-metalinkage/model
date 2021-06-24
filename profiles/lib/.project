@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>lib</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>terms.ttl</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/surround-bb/sso-generator/terms/terms.ttl</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
