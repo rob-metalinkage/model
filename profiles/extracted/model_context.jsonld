@@ -1,0 +1,103 @@
+{
+    "@id": "https://w3id.org/cybele/model/proxy/skos",
+    "@context": [
+        {
+            "OrderedCollection": {
+                "@id": "skos:OrderedCollection"
+            },
+            "Collection": {
+                "@id": "skos:Collection"
+            },
+            "ConceptScheme": {
+                "@id": "skos:ConceptScheme"
+            },
+            "Concept": {
+                "@id": "skos:Concept"
+            },
+            "exactMatch": {
+                "@id": "skos:exactMatch"
+            },
+            "member": {
+                "@id": "skos:member"
+            },
+            "memberList": {
+                "@id": "skos:memberList"
+            },
+            "relatedMatch": {
+                "@id": "skos:relatedMatch"
+            },
+            "broadMatch": {
+                "@id": "skos:broadMatch"
+            },
+            "closeMatch": {
+                "@id": "skos:closeMatch"
+            },
+            "hasTopConcept": {
+                "@id": "skos:hasTopConcept"
+            },
+            "inScheme": {
+                "@id": "skos:inScheme"
+            },
+            "narrowMatch": {
+                "@id": "skos:narrowMatch"
+            },
+            "related": {
+                "@id": "skos:related"
+            },
+            "topConceptOf": {
+                "@id": "skos:topConceptOf"
+            },
+            "broader": {
+                "@id": "skos:broader"
+            },
+            "broaderTransitive": {
+                "@id": "skos:broaderTransitive"
+            },
+            "narrower": {
+                "@id": "skos:narrower"
+            },
+            "narrowerTransitive": {
+                "@id": "skos:narrowerTransitive"
+            },
+            "mappingRelation": {
+                "@id": "skos:mappingRelation"
+            },
+            "semanticRelation": {
+                "@id": "skos:semanticRelation"
+            },
+            "notation": {
+                "@id": "skos:notation"
+            },
+            "altLabel": {
+                "@id": "skos:altLabel"
+            },
+            "changeNote": {
+                "@id": "skos:changeNote"
+            },
+            "definition": {
+                "@id": "skos:definition"
+            },
+            "editorialNote": {
+                "@id": "skos:editorialNote"
+            },
+            "example": {
+                "@id": "skos:example"
+            },
+            "hiddenLabel": {
+                "@id": "skos:hiddenLabel"
+            },
+            "historyNote": {
+                "@id": "skos:historyNote"
+            },
+            "prefLabel": {
+                "@id": "skos:prefLabel"
+            },
+            "scopeNote": {
+                "@id": "skos:scopeNote"
+            },
+            "note": {
+                "@id": "skos:note"
+            }
+        }
+    ]
+}

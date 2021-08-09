@@ -1,0 +1,26 @@
+{
+    "@id": "http://w3id.org/cybele/model",
+    "@context": [
+        "https://w3id.org/cybele/model/proxy/dcterms?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/prov?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/cube?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/dcat?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/foaf?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/skos?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/prov?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/cube?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/dcat?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/dcterms?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/foaf?_profile=jsoncontext",
+        "https://w3id.org/cybele/model/proxy/skos?_profile=jsoncontext",
+        {
+            "dcterms": "http://purl.org/dc/terms/",
+            "prov": "http://www.w3.org/ns/prov#",
+            "qb": "http://purl.org/linked-data/cube#",
+            "cybele": "http://w3id.org/cybele/model#",
+            "dcat": "http://www.w3.org/ns/dcat#",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "skos": "http://www.w3.org/2004/02/skos/core#"
+        }
+    ]
+}

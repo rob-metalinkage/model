@@ -1,0 +1,217 @@
+{
+    "@id": "http://w3id.org/cybele/model",
+    "@context": [
+        {
+            "dct": "http://purl.org/dc/terms/",
+            "prov": "http://www.w3.org/ns/prov#",
+            "qb": "http://purl.org/linked-data/cube#",
+            "cybele": "http://w3id.org/cybele/model#",
+            "dcat": "http://www.w3.org/ns/dcat#",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "skos": "http://www.w3.org/2004/02/skos/core#",
+            "Location": {
+                "@id": "dct:Location"
+            },
+            "Frequency": {
+                "@id": "dct:Frequency"
+            },
+            "RightsStatement": {
+                "@id": "dct:RightsStatement"
+            },
+            "LicenseDocument": {
+                "@id": "dct:LicenseDocument"
+            },
+            "Database": {
+                "@id": "cybele:Database"
+            },
+            "LinguisticSystem": {
+                "@id": "dct:LinguisticSystem"
+            },
+            "MediaType": {
+                "@id": "dct:MediaType"
+            },
+            "Agent": {
+                "@id": "foaf:Agent"
+            },
+            "Standard": {
+                "@id": "dct:Standard"
+            },
+            "Table": {
+                "@id": "cybele:Table"
+            },
+            "PeriodOfTime": {
+                "@id": "dct:PeriodOfTime"
+            },
+            "Entity": {
+                "@id": "prov:Entity"
+            },
+            "Activity": {
+                "@id": "prov:Activity"
+            },
+            "DataStructureDefinition": {
+                "@id": "qb:DataStructureDefinition"
+            },
+            "DataSet": {
+                "@id": "qb:DataSet"
+            },
+            "MeasureProperty": {
+                "@id": "qb:MeasureProperty"
+            },
+            "DimensionProperty": {
+                "@id": "qb:DimensionProperty"
+            },
+            "ComponentSpecification": {
+                "@id": "qb:ComponentSpecification"
+            },
+            "Dataset": {
+                "@id": "dcat:Dataset"
+            },
+            "DataService": {
+                "@id": "dcat:DataService"
+            },
+            "Distribution": {
+                "@id": "dcat:Distribution"
+            },
+            "Catalog": {
+                "@id": "dcat:Catalog"
+            },
+            "Resource": {
+                "@id": "dcat:Resource"
+            },
+            "Document": {
+                "@id": "foaf:Document"
+            },
+            "Concept": {
+                "@id": "skos:Concept"
+            },
+            "publisher": {
+                "@id": "dct:publisher",
+                "@type": "foaf:Agent"
+            },
+            "conformsTo": {
+                "@id": "dct:conformsTo",
+                "@type": "dct:Standard"
+            },
+            "spatial": {
+                "@id": "dct:spatial",
+                "@type": "dct:Location"
+            },
+            "accessTable": {
+                "@id": "cybele:accessTable",
+                "@type": "@id"
+            },
+            "language": {
+                "@id": "dct:language",
+                "@type": "dct:LinguisticSystem"
+            },
+            "accessDatabase": {
+                "@id": "cybele:accessDatabase",
+                "@type": "@id"
+            },
+            "accessRights": {
+                "@id": "dct:accessRights",
+                "@type": "dct:RightsStatement"
+            },
+            "accrualPeriodicity": {
+                "@id": "dct:accrualPeriodicity",
+                "@type": "dct:Frequency"
+            },
+            "temporal": {
+                "@id": "dct:temporal",
+                "@type": "dct:PeriodOfTime"
+            },
+            "license": {
+                "@id": "dct:license",
+                "@type": "dct:LicenseDocument"
+            },
+            "wasAttributedTo": {
+                "@id": "prov:wasAttributedTo",
+                "@type": "@id"
+            },
+            "wasAssociatedWith": {
+                "@id": "prov:wasAssociatedWith",
+                "@type": "@id"
+            },
+            "actedOnBehalfOf": {
+                "@id": "prov:actedOnBehalfOf",
+                "@type": "@id"
+            },
+            "wasGeneratedBy": {
+                "@id": "prov:wasGeneratedBy",
+                "@type": "@id"
+            },
+            "measure": {
+                "@id": "qb:measure",
+                "@type": "qb:MeasureProperty"
+            },
+            "component": {
+                "@id": "qb:component",
+                "@type": "qb:ComponentSpecification"
+            },
+            "dimension": {
+                "@id": "qb:dimension",
+                "@type": "qb:DimensionProperty"
+            },
+            "structure": {
+                "@id": "qb:structure",
+                "@type": "qb:DataStructureDefinition"
+            },
+            "landingPage": {
+                "@id": "dcat:landingPage",
+                "@type": "foaf:Document"
+            },
+            "accessService": {
+                "@id": "dcat:accessService",
+                "@type": "@id"
+            },
+            "theme": {
+                "@id": "dcat:theme",
+                "@type": "skos:Concept"
+            },
+            "downloadURL": {
+                "@id": "dcat:downloadURL",
+                "@type": "rdfs:Resource"
+            },
+            "mediaType": {
+                "@id": "dcat:mediaType",
+                "@type": "dct:MediaType"
+            },
+            "endpointURL": {
+                "@id": "dcat:endpointURL",
+                "@type": "@id"
+            },
+            "connectionString": {
+                "@id": "cybele:connectionString",
+                "@type": "rdfs:Literal"
+            },
+            "modified": {
+                "@id": "dct:modified",
+                "@type": "rdfs:Literal"
+            },
+            "identifier": {
+                "@id": "dct:identifier",
+                "@type": "rdfs:Literal"
+            },
+            "tableName": {
+                "@id": "cybele:tableName",
+                "@type": "rdfs:Literal"
+            },
+            "issued": {
+                "@id": "dct:issued",
+                "@type": "rdfs:Literal"
+            },
+            "byteSize": {
+                "@id": "dcat:byteSize",
+                "@type": "rdfs:Literal"
+            },
+            "spatialResolutionInMeters": {
+                "@id": "dcat:spatialResolutionInMeters",
+                "@type": "xsd:decimal"
+            },
+            "temporalResolution": {
+                "@id": "dcat:temporalResolution",
+                "@type": "xsd:duration"
+            }
+        }
+    ]
+}
