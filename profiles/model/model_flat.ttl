@@ -2,9 +2,9 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://purl.org/dc/dcam/> .
-@prefix ns2: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix ns3: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns2: <http://purl.org/dc/dcam/> .
+@prefix ns3: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
@@ -166,7 +166,7 @@ foaf:Agent a rdfs:Class,
     rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
     rdfs:isDefinedBy foaf: ;
     owl:equivalentClass dct:Agent ;
-    ns2:term_status "stable" .
+    ns3:term_status "stable" .
 
 foaf:Document a rdfs:Class,
         owl:Class ;
@@ -176,12 +176,12 @@ foaf:Document a rdfs:Class,
     owl:disjointWith foaf:Organization,
         foaf:Project ;
     owl:equivalentClass schema:CreativeWork ;
-    ns2:term_status "stable" .
+    ns3:term_status "stable" .
 
 dct:accessRights a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Access Rights"@en ;
-    ns1:rangeIncludes dct:RightsStatement ;
+    ns2:rangeIncludes dct:RightsStatement ;
     dct:description "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en ;
     dct:issued "2003-02-15"^^xsd:date ;
     rdfs:comment "Information about who access the resource or an indication of its security status."@en ;
@@ -191,7 +191,7 @@ dct:accessRights a rdf:Property,
 dct:accrualPeriodicity a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Accrual Periodicity"@en ;
-    ns1:rangeIncludes dct:Frequency ;
+    ns2:rangeIncludes dct:Frequency ;
     dct:description "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]."@en ;
     dct:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "The frequency with which items are added to a collection."@en ;
@@ -202,7 +202,7 @@ dct:accrualPeriodicity a rdf:Property,
 dct:conformsTo a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Conforms To"@en ;
-    ns1:rangeIncludes dct:Standard ;
+    ns2:rangeIncludes dct:Standard ;
     dct:issued "2001-05-21"^^xsd:date ;
     rdfs:comment "An established standard to which the described resource conforms."@en ;
     rdfs:isDefinedBy dct: ;
@@ -235,7 +235,7 @@ dct:issued a rdf:Property,
 dct:language a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Language"@en ;
-    ns1:rangeIncludes dct:LinguisticSystem ;
+    ns2:rangeIncludes dct:LinguisticSystem ;
     dct:description "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
     dct:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A language of the resource."@en ;
@@ -245,7 +245,7 @@ dct:language a rdf:Property,
 dct:license a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "License"@en ;
-    ns1:rangeIncludes dct:LicenseDocument ;
+    ns2:rangeIncludes dct:LicenseDocument ;
     dct:description "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
     dct:issued "2004-06-14"^^xsd:date ;
     rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
@@ -264,7 +264,7 @@ dct:modified a rdf:Property,
 dct:publisher a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Publisher"@en ;
-    ns1:rangeIncludes dct:Agent ;
+    ns2:rangeIncludes dct:Agent ;
     dct:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An entity responsible for making the resource available."@en ;
     rdfs:isDefinedBy dct: ;
@@ -275,7 +275,7 @@ dct:rights a owl:AnnotationProperty .
 dct:spatial a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Spatial Coverage"@en ;
-    ns1:rangeIncludes dct:Location ;
+    ns2:rangeIncludes dct:Location ;
     dct:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Spatial characteristics of the resource."@en ;
     rdfs:isDefinedBy dct: ;
@@ -284,7 +284,7 @@ dct:spatial a rdf:Property,
 dct:temporal a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "Temporal Coverage"@en ;
-    ns1:rangeIncludes dct:PeriodOfTime ;
+    ns2:rangeIncludes dct:PeriodOfTime ;
     dct:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Temporal characteristics of the resource."@en ;
     rdfs:isDefinedBy dct: ;
@@ -635,13 +635,13 @@ prov:Entity a owl:Class ;
         <http://xmlns.com/foaf/0.1> ;
     owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.ttl> ;
     owl:versionInfo "1.1" ;
-    ns3:isProfileOf <https://w3id.org/cybele/model/proxy/cube>,
-        <https://w3id.org/cybele/model/proxy/dcat>,
-        <https://w3id.org/cybele/model/proxy/dcterms>,
-        <https://w3id.org/cybele/model/proxy/foaf>,
-        <https://w3id.org/cybele/model/proxy/prov>,
-        <https://w3id.org/cybele/model/proxy/skos> ;
-    ns3:isTransitiveProfileOf <http://purl.org/dc/terms>,
+    ns1:isProfileOf <https://w3id.org/cybele/proxy/cube>,
+        <https://w3id.org/cybele/proxy/dcat>,
+        <https://w3id.org/cybele/proxy/dcterms>,
+        <https://w3id.org/cybele/proxy/foaf>,
+        <https://w3id.org/cybele/proxy/prov>,
+        <https://w3id.org/cybele/proxy/skos> ;
+    ns1:isTransitiveProfileOf <http://purl.org/dc/terms>,
         <http://purl.org/linked-data/cube>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/ns/dcat>,
@@ -651,7 +651,7 @@ prov:Entity a owl:Class ;
             rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\profiles\\model.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = model.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-08-09"^^xsd:date ;
+            prov:endedAtTime "2021-08-10"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:depiction <https://gitlab.res.eng.it/cybele/data/cybele-common-semantic-model/-/raw/master/images/model_matching.jpg> ;

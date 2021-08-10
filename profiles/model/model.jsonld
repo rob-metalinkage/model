@@ -1,70 +1,123 @@
 [
   {
-    "@id": "http://purl.org/dc/terms/MediaType",
+    "@id": "http://xmlns.com/foaf/0.1/depiction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#accessService",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/TR/vocab-dcat/"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd2d5e8c50e8a4edbdd9a9a57182626e3ede2678e79d62a51146cba162bbdf031",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cbf2cc8845d97f6b0fe410c749bf6644a6315b1ebccda95e6ce41e8795cd45657f"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Konstantinos Kentrotis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbf2cc8845d97f6b0fe410c749bf6644a6315b1ebccda95e6ce41e8795cd45657f",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "EXUS"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/temporal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/PeriodOfTime"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/affiliation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/RightsStatement",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "_:cb1002d5ca0bf3dbd69278219f742e492b49345a9ad22d3c48e002a9e685d99ea84",
+    "@id": "_:cb157ec47d124cfd4eca4be6633f854a51b99bdb9d0d0107ec24a7d522825a63018",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb143be54054caf73361e9959c4a21ff76329e79799c0e78dad72d6cffde2988d61"
+        "@id": "_:cbe2e5fb290727da1edefbf47b3705c5ec9922c7c06fdf7721b0a10d3f571043c5"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://orcid.org/0000-0003-4289-4922"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Giorgos Santipantakis"
+        "@value": "Raul Palma"
       }
     ]
   },
   {
-    "@id": "_:cb143be54054caf73361e9959c4a21ff76329e79799c0e78dad72d6cffde2988d61",
+    "@id": "_:cbe2e5fb290727da1edefbf47b3705c5ec9922c7c06fdf7721b0a10d3f571043c5",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "UPRC"
+        "@value": "PSNC"
       }
     ]
   },
   {
-    "@id": "_:cb435abad26ba5674cd5120bcfff21d2fd146202cc6d250e3db4a53d2b87166837",
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "_:cbe120fc0e98f33835c7bceb0883a4e882d45450c623df83fbd4daf27b0f093d73",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb10a5abe0d9c9dbc30a02f4e0e27ec05fa466b5d1a409cb630d646c32065f2f892"
+        "@id": "_:cb16155501fe965894f244bd01e474daa93a7339df81a7f57edf786b17124d196df"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Dilli Paudel"
+        "@value": "Dimitris Zeginis"
       }
     ]
   },
   {
-    "@id": "_:cb10a5abe0d9c9dbc30a02f4e0e27ec05fa466b5d1a409cb630d646c32065f2f892",
+    "@id": "_:cb16155501fe965894f244bd01e474daa93a7339df81a7f57edf786b17124d196df",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "WU"
+        "@value": "CERTH"
       }
     ]
   },
   {
-    "@id": "_:cb149ad5afdee621f806027190afe39ff719d529f156d25fc2e15894a2bcb46d393",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb17e460bb0d77c519106c3e306382e31e64e756156fb3eaeb018852f817ab3d1d4"
-      }
+    "@id": "http://purl.org/dc/terms/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://xmlns.com/foaf/0.1/name": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@value": "Spiros Mouzakitis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb17e460bb0d77c519106c3e306382e31e64e756156fb3eaeb018852f817ab3d1d4",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "ICCS"
+        "@id": "http://purl.org/dc/terms/LicenseDocument"
       }
     ]
   },
@@ -72,6 +125,66 @@
     "@id": "http://purl.org/dc/terms/LinguisticSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "_:cbe3c1feefc8159968e250243bc2e2b75dabbf162d3f31f65cbaff10779bcb77d0",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb16bcf40f9fdc5a853fd947b622d6565eabe9f2d2865b7bdb1145a1b7b91869c9e"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Tambouris Efthimios"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb16bcf40f9fdc5a853fd947b622d6565eabe9f2d2865b7bdb1145a1b7b91869c9e",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2001/XMLSchema#duration",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/cybele/model#accessTable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/cybele/model#Database"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://w3id.org/cybele/model"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "accessTable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/cybele/model#Table"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/issued",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
@@ -96,39 +209,52 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/PeriodOfTime",
+    "@id": "http://xmlns.com/foaf/0.1/Agent",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb140f949861b3a7c1a395d0e6ed1844419db32cf1f5f81e8744dceacc92f192d51",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cbd7fc1f75daf68b0472a1537d33b769b597224522a3bd01fa68b560880a8e6956"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Martin Klopfer"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd7fc1f75daf68b0472a1537d33b769b597224522a3bd01fa68b560880a8e6956",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "OGC"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/rights",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/MediaType",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2001/XMLSchema#duration",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/depiction",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/maker",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    "@id": "http://www.w3.org/ns/prov#Entity",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/prov#"
+      }
     ]
   },
   {
@@ -138,9 +264,118 @@
     ]
   },
   {
-    "@id": "https://www.cybele-project.eu/",
+    "@id": "_:cb801e0eff205aaff52b1182dfe28c9c7bcb201dc49689dc9369856187de4fa417",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb1f182efc1381370bbbfdb9ecfc3719aa6d7bdb1c9337d8d187fa589cdc162793d"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Evangelos Kalampokis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1f182efc1381370bbbfdb9ecfc3719aa6d7bdb1c9337d8d187fa589cdc162793d",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#DataService",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/TR/vocab-dcat/"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/cybele/model#Database",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://w3id.org/cybele/model"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Database"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/homepage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/accrualPeriodicity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/Frequency"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#endpointURL",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/TR/vocab-dcat/"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/name",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/conformsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/Standard"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/cybele/model#connectionString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/cybele/model#Database"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://w3id.org/cybele/model"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "connectionString"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
     ]
   },
   {
@@ -171,15 +406,180 @@
     ]
   },
   {
+    "@id": "http://www.w3.org/ns/prov#Agent",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/prov#"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/accessRights",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/RightsStatement"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Standard",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/linked-data/cube#DataSet",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/TR/vocab-dcat/"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/dc/terms/modified",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
+    "@id": "http://purl.org/dc/terms/language",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/LinguisticSystem"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/publisher",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/dc/terms/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/prov#Activity",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/prov#"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Frequency",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/spatial",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/Location"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#Dataset",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:cb1de5cbbf8222f552e11d3fe4bd1362ca1b5afb6ba4b20fbc291b09e9fce7c930a"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1de5cbbf8222f552e11d3fe4bd1362ca1b5afb6ba4b20fbc291b09e9fce7c930a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#theme"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/maker",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "_:cb18d3058b7cb1b1fb2ec8057301b1db4b4bdaa5c7291887f04adeb98553a606012",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb1066d022b9c45192cf95a197ef8b2b21bccfbbe0a8a452abe0d13032852cb871b"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Konstantinos Latanis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1066d022b9c45192cf95a197ef8b2b21bccfbbe0a8a452abe0d13032852cb871b",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "SUITE5"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/identifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "_:cb161791973f2c02b3c51906357aa0455e692c47493231447cd3244a3543b220975",
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@id": "https://www.cybele-project.eu/"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "CYBELE project"
+      }
     ]
   },
   {
@@ -200,6 +600,60 @@
     ]
   },
   {
+    "@id": "http://purl.org/dc/terms/PeriodOfTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/cybele/model#tableName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/cybele/model#Table"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://w3id.org/cybele/model"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "connectionString"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1002d5ca0bf3dbd69278219f742e492b49345a9ad22d3c48e002a9e685d99ea84",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb143be54054caf73361e9959c4a21ff76329e79799c0e78dad72d6cffde2988d61"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Giorgos Santipantakis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb143be54054caf73361e9959c4a21ff76329e79799c0e78dad72d6cffde2988d61",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "UPRC"
+      }
+    ]
+  },
+  {
     "@id": "http://w3id.org/cybele/model",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology",
@@ -207,16 +661,13 @@
     ],
     "http://purl.org/dc/terms/contributor": [
       {
-        "@id": "_:cbf2bfdbc4343a78e7589fb56a7ed30faa7a02f721911937aa0b641f47229b5cc5"
+        "@id": "_:cb1974406e772a7992a6fae322f3563f2ce34f8ad43f1b9eea5e25c1a8ce1cce3d4"
       },
       {
-        "@id": "_:cb18d0e033c4af92ed95d6b827d408098b23c16da1f801b0489a78c37aefc9b96f1"
+        "@id": "_:cb12eb7a7f81d38b1dfd744042cbacedbdf6bfa5ef4a8737673a1adc2dc258f4db4"
       },
       {
         "@id": "_:cb142acc09e58550901ab619a14a5d4deab9639edc9557f2fbe97df8983dda317aa"
-      },
-      {
-        "@id": "_:cb212c5e132d46914bda0309fe360163862b96186888af37e416aa02baa459d9c6d"
       },
       {
         "@id": "_:cb13158aad94c5b1312f1d73d5ffa0caaba4365245bc3c5e8d487d1e0d8b2518811"
@@ -225,28 +676,31 @@
         "@id": "_:cb150e4769080c63c1a28b695a64b2a50f2c9da649714af968359720ba68cf3837f"
       },
       {
-        "@id": "_:cb1206c94ae92cfc885ed21b37b4f501a40858875bcfe6a1cc8e13f8a7742440072"
-      },
-      {
-        "@id": "_:cbcdb4bae8a4a0299f3a989c0419b68fd862c62bf31b1dcf0b365831e8f4d5b458"
-      },
-      {
-        "@id": "_:cb12eb7a7f81d38b1dfd744042cbacedbdf6bfa5ef4a8737673a1adc2dc258f4db4"
-      },
-      {
-        "@id": "_:cb8f1c39612d8cc2f604a10b9e98759c17f872d7777f2cb90f3faceacb403e26f1"
-      },
-      {
         "@id": "_:cb90f166bbefeae0f6e49924f4364bc659ac0810faf1b900b581780d8c9d9c7878"
+      },
+      {
+        "@id": "_:cb212c5e132d46914bda0309fe360163862b96186888af37e416aa02baa459d9c6d"
+      },
+      {
+        "@id": "_:cb1cd5a8d0bd221b6d3ad8cd0bbf63a50e55db47f631fec5ca5dad295732dd0732f"
+      },
+      {
+        "@id": "_:cbf2bfdbc4343a78e7589fb56a7ed30faa7a02f721911937aa0b641f47229b5cc5"
       },
       {
         "@id": "_:cb17e159366db0d852294ad5bf4ce945c44d2869abd651c0ef8bd5b112cde11ab25"
       },
       {
-        "@id": "_:cb1974406e772a7992a6fae322f3563f2ce34f8ad43f1b9eea5e25c1a8ce1cce3d4"
+        "@id": "_:cb8f1c39612d8cc2f604a10b9e98759c17f872d7777f2cb90f3faceacb403e26f1"
       },
       {
-        "@id": "_:cb1cd5a8d0bd221b6d3ad8cd0bbf63a50e55db47f631fec5ca5dad295732dd0732f"
+        "@id": "_:cbcdb4bae8a4a0299f3a989c0419b68fd862c62bf31b1dcf0b365831e8f4d5b458"
+      },
+      {
+        "@id": "_:cb1206c94ae92cfc885ed21b37b4f501a40858875bcfe6a1cc8e13f8a7742440072"
+      },
+      {
+        "@id": "_:cb18d0e033c4af92ed95d6b827d408098b23c16da1f801b0489a78c37aefc9b96f1"
       }
     ],
     "http://purl.org/dc/terms/creator": [
@@ -302,10 +756,10 @@
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
-        "@id": "http://www.w3.org/ns/prov"
+        "@id": "http://purl.org/linked-data/cube"
       },
       {
-        "@id": "http://purl.org/linked-data/cube"
+        "@id": "http://www.w3.org/ns/prov"
       },
       {
         "@id": "http://www.w3.org/ns/dcat"
@@ -332,30 +786,30 @@
     ],
     "http://www.w3.org/ns/dx/prof/isProfileOf": [
       {
-        "@id": "https://w3id.org/cybele/model/proxy/prov"
+        "@id": "https://w3id.org/cybele/proxy/cube"
       },
       {
-        "@id": "https://w3id.org/cybele/model/proxy/cube"
+        "@id": "https://w3id.org/cybele/proxy/prov"
       },
       {
-        "@id": "https://w3id.org/cybele/model/proxy/dcat"
+        "@id": "https://w3id.org/cybele/proxy/dcat"
       },
       {
-        "@id": "https://w3id.org/cybele/model/proxy/dcterms"
+        "@id": "https://w3id.org/cybele/proxy/dcterms"
       },
       {
-        "@id": "https://w3id.org/cybele/model/proxy/foaf"
+        "@id": "https://w3id.org/cybele/proxy/foaf"
       },
       {
-        "@id": "https://w3id.org/cybele/model/proxy/skos"
+        "@id": "https://w3id.org/cybele/proxy/skos"
       }
     ],
     "http://www.w3.org/ns/dx/prof/isTransitiveProfileOf": [
       {
-        "@id": "http://www.w3.org/ns/prov"
+        "@id": "http://purl.org/linked-data/cube"
       },
       {
-        "@id": "http://purl.org/linked-data/cube"
+        "@id": "http://www.w3.org/ns/prov"
       },
       {
         "@id": "http://www.w3.org/ns/dcat"
@@ -372,12 +826,12 @@
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:Nc230c0d7b2c34de0ae16a8e9f031ef03"
+        "@id": "_:N035a25b59a704d3fb198d510e92d416d"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:N6a485a76ef4f4bf99ae62b578c1037ad"
+        "@id": "_:N79b7a1d801bf476dbcf3eef6c3442a8a"
       }
     ],
     "http://xmlns.com/foaf/0.1/depiction": [
@@ -392,44 +846,70 @@
     ]
   },
   {
-    "@id": "_:cbf2bfdbc4343a78e7589fb56a7ed30faa7a02f721911937aa0b641f47229b5cc5",
+    "@id": "_:cb20a6be8963d02fb280225f0c640eb7515b8cd985b2cbe3c585f31dab4f5148cce",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb180070b05dd17404b08db9cc561bfa3a19f2d2ec5e73bea246a29919ca3753690"
+        "@id": "_:cb1794af33b9d3975519fa369aaaac6497d28eee4446b87b23491b5a4e4b68846d0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://orcid.org/0000-0003-4289-4922"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Konstantinos Tarabanis"
+        "@value": "Raul Palma"
       }
     ]
   },
   {
-    "@id": "_:cb180070b05dd17404b08db9cc561bfa3a19f2d2ec5e73bea246a29919ca3753690",
+    "@id": "_:cb1794af33b9d3975519fa369aaaac6497d28eee4446b87b23491b5a4e4b68846d0",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "PSNC"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1974406e772a7992a6fae322f3563f2ce34f8ad43f1b9eea5e25c1a8ce1cce3d4",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb13945248b060ae5581a91e629f062f266e404eccb6710af7ba22f129dc10aa914"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Spiros Mouzakitis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb13945248b060ae5581a91e629f062f266e404eccb6710af7ba22f129dc10aa914",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "ICCS"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb12eb7a7f81d38b1dfd744042cbacedbdf6bfa5ef4a8737673a1adc2dc258f4db4",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cbfa7f04ba11e3bea8861adfc0562cc3fe1725be97d76376f7d08cbe560d741843"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Dimitris Zeginis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbfa7f04ba11e3bea8861adfc0562cc3fe1725be97d76376f7d08cbe560d741843",
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@value": "CERTH"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb18d0e033c4af92ed95d6b827d408098b23c16da1f801b0489a78c37aefc9b96f1",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cbbb776f48f1243f8a5e54ea1e48e7d91d110450245e682c5118c2422f4353aaab"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Ingo Simonis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbbb776f48f1243f8a5e54ea1e48e7d91d110450245e682c5118c2422f4353aaab",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "OGC"
       }
     ]
   },
@@ -451,27 +931,6 @@
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@value": "OGC"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb212c5e132d46914bda0309fe360163862b96186888af37e416aa02baa459d9c6d",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cba3b5c7aa5ee40f6ba36c44c82d854d9e82cea5f9c77524e98f769ca7d4c449a3"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Konstantinos Latanis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cba3b5c7aa5ee40f6ba36c44c82d854d9e82cea5f9c77524e98f769ca7d4c449a3",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "SUITE5"
       }
     ]
   },
@@ -518,90 +977,6 @@
     ]
   },
   {
-    "@id": "_:cb1206c94ae92cfc885ed21b37b4f501a40858875bcfe6a1cc8e13f8a7742440072",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb14b0f6e39dff5159f7d54b3ced15f7684de09cee4b16fcbb507fcd2e5bec150cb"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Konstantinos Kentrotis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb14b0f6e39dff5159f7d54b3ced15f7684de09cee4b16fcbb507fcd2e5bec150cb",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "EXUS"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbcdb4bae8a4a0299f3a989c0419b68fd862c62bf31b1dcf0b365831e8f4d5b458",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb140b381847846e0a0b0a4e46939f20fa0a53adad7f6d1ef8f3e06ec4f3ad6a2a7"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Evangelos Kalampokis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb140b381847846e0a0b0a4e46939f20fa0a53adad7f6d1ef8f3e06ec4f3ad6a2a7",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CERTH"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb12eb7a7f81d38b1dfd744042cbacedbdf6bfa5ef4a8737673a1adc2dc258f4db4",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cbfa7f04ba11e3bea8861adfc0562cc3fe1725be97d76376f7d08cbe560d741843"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Dimitris Zeginis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbfa7f04ba11e3bea8861adfc0562cc3fe1725be97d76376f7d08cbe560d741843",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CERTH"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb8f1c39612d8cc2f604a10b9e98759c17f872d7777f2cb90f3faceacb403e26f1",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb142a9e7f1aee8a7ebcf8f64ea448692aa22feb4cefb0c5f9afabbdb6c04e3078c"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Eleni Panopoulou"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb142a9e7f1aee8a7ebcf8f64ea448692aa22feb4cefb0c5f9afabbdb6c04e3078c",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CERTH"
-      }
-    ]
-  },
-  {
     "@id": "_:cb90f166bbefeae0f6e49924f4364bc659ac0810faf1b900b581780d8c9d9c7878",
     "http://schema.org/affiliation": [
       {
@@ -623,44 +998,23 @@
     ]
   },
   {
-    "@id": "_:cb17e159366db0d852294ad5bf4ce945c44d2869abd651c0ef8bd5b112cde11ab25",
+    "@id": "_:cb212c5e132d46914bda0309fe360163862b96186888af37e416aa02baa459d9c6d",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb64b75e831289d221f6db08b0ad1572806a2c40f30aeaf238ef564ea3234cff70"
+        "@id": "_:cba3b5c7aa5ee40f6ba36c44c82d854d9e82cea5f9c77524e98f769ca7d4c449a3"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Maria Plakia"
+        "@value": "Konstantinos Latanis"
       }
     ]
   },
   {
-    "@id": "_:cb64b75e831289d221f6db08b0ad1572806a2c40f30aeaf238ef564ea3234cff70",
+    "@id": "_:cba3b5c7aa5ee40f6ba36c44c82d854d9e82cea5f9c77524e98f769ca7d4c449a3",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "EXUS"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1974406e772a7992a6fae322f3563f2ce34f8ad43f1b9eea5e25c1a8ce1cce3d4",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb13945248b060ae5581a91e629f062f266e404eccb6710af7ba22f129dc10aa914"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Spiros Mouzakitis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb13945248b060ae5581a91e629f062f266e404eccb6710af7ba22f129dc10aa914",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "ICCS"
+        "@value": "SUITE5"
       }
     ]
   },
@@ -686,28 +1040,128 @@
     ]
   },
   {
-    "@id": "_:cb20a6be8963d02fb280225f0c640eb7515b8cd985b2cbe3c585f31dab4f5148cce",
+    "@id": "_:cbf2bfdbc4343a78e7589fb56a7ed30faa7a02f721911937aa0b641f47229b5cc5",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb1794af33b9d3975519fa369aaaac6497d28eee4446b87b23491b5a4e4b68846d0"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "http://orcid.org/0000-0003-4289-4922"
+        "@id": "_:cb180070b05dd17404b08db9cc561bfa3a19f2d2ec5e73bea246a29919ca3753690"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Raul Palma"
+        "@value": "Konstantinos Tarabanis"
       }
     ]
   },
   {
-    "@id": "_:cb1794af33b9d3975519fa369aaaac6497d28eee4446b87b23491b5a4e4b68846d0",
+    "@id": "_:cb180070b05dd17404b08db9cc561bfa3a19f2d2ec5e73bea246a29919ca3753690",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "PSNC"
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb17e159366db0d852294ad5bf4ce945c44d2869abd651c0ef8bd5b112cde11ab25",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb64b75e831289d221f6db08b0ad1572806a2c40f30aeaf238ef564ea3234cff70"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Maria Plakia"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb64b75e831289d221f6db08b0ad1572806a2c40f30aeaf238ef564ea3234cff70",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "EXUS"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb8f1c39612d8cc2f604a10b9e98759c17f872d7777f2cb90f3faceacb403e26f1",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb142a9e7f1aee8a7ebcf8f64ea448692aa22feb4cefb0c5f9afabbdb6c04e3078c"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Eleni Panopoulou"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb142a9e7f1aee8a7ebcf8f64ea448692aa22feb4cefb0c5f9afabbdb6c04e3078c",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbcdb4bae8a4a0299f3a989c0419b68fd862c62bf31b1dcf0b365831e8f4d5b458",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb140b381847846e0a0b0a4e46939f20fa0a53adad7f6d1ef8f3e06ec4f3ad6a2a7"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Evangelos Kalampokis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb140b381847846e0a0b0a4e46939f20fa0a53adad7f6d1ef8f3e06ec4f3ad6a2a7",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1206c94ae92cfc885ed21b37b4f501a40858875bcfe6a1cc8e13f8a7742440072",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cb14b0f6e39dff5159f7d54b3ced15f7684de09cee4b16fcbb507fcd2e5bec150cb"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Konstantinos Kentrotis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb14b0f6e39dff5159f7d54b3ced15f7684de09cee4b16fcbb507fcd2e5bec150cb",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "EXUS"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb18d0e033c4af92ed95d6b827d408098b23c16da1f801b0489a78c37aefc9b96f1",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "_:cbbb776f48f1243f8a5e54ea1e48e7d91d110450245e682c5118c2422f4353aaab"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Ingo Simonis"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbbb776f48f1243f8a5e54ea1e48e7d91d110450245e682c5118c2422f4353aaab",
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "OGC"
       }
     ]
   },
@@ -725,7 +1179,7 @@
     ]
   },
   {
-    "@id": "_:N6a485a76ef4f4bf99ae62b578c1037ad",
+    "@id": "_:N79b7a1d801bf476dbcf3eef6c3442a8a",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -737,17 +1191,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-08-09"
+        "@value": "2021-08-10"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:N8f23a63b20f34498a2bc2f201bcf4d11"
+        "@id": "_:N2af37947df3e4803b6d6340dd91d21bc"
       }
     ]
   },
   {
-    "@id": "_:N8f23a63b20f34498a2bc2f201bcf4d11",
+    "@id": "_:N2af37947df3e4803b6d6340dd91d21bc",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -758,7 +1212,7 @@
     ]
   },
   {
-    "@id": "_:Nc230c0d7b2c34de0ae16a8e9f031ef03",
+    "@id": "_:N035a25b59a704d3fb198d510e92d416d",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -769,197 +1223,30 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dcat#accessService",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/TR/vocab-dcat/"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/Location",
+    "@id": "http://creativecommons.org/licenses/by/4.0/",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/accrualPeriodicity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/Frequency"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/cybele/model#Database",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://w3id.org/cybele/model"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Database"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbe3c1feefc8159968e250243bc2e2b75dabbf162d3f31f65cbaff10779bcb77d0",
+    "@id": "_:cb1307ee77d56c80b78852642d0976a68e83ae08c8ee0881c80f08840cbc78b9ae4",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb16bcf40f9fdc5a853fd947b622d6565eabe9f2d2865b7bdb1145a1b7b91869c9e"
+        "@id": "_:cba8eda99af17c9d4699638f01418515c99a2e68745617dda06e5a0f8dd4658f83"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Tambouris Efthimios"
+        "@value": "Maria Plakia"
       }
     ]
   },
   {
-    "@id": "_:cb16bcf40f9fdc5a853fd947b622d6565eabe9f2d2865b7bdb1145a1b7b91869c9e",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CERTH"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/cybele/model#tableName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/cybele/model#Table"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://w3id.org/cybele/model"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "connectionString"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/linked-data/cube#DataSet",
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://www.w3.org/ns/dcat#Dataset"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/Agent",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/TR/vocab-dcat/"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb140f949861b3a7c1a395d0e6ed1844419db32cf1f5f81e8744dceacc92f192d51",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cbd7fc1f75daf68b0472a1537d33b769b597224522a3bd01fa68b560880a8e6956"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Martin Klopfer"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbd7fc1f75daf68b0472a1537d33b769b597224522a3bd01fa68b560880a8e6956",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "OGC"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbd2d5e8c50e8a4edbdd9a9a57182626e3ede2678e79d62a51146cba162bbdf031",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cbf2cc8845d97f6b0fe410c749bf6644a6315b1ebccda95e6ce41e8795cd45657f"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Konstantinos Kentrotis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbf2cc8845d97f6b0fe410c749bf6644a6315b1ebccda95e6ce41e8795cd45657f",
+    "@id": "_:cba8eda99af17c9d4699638f01418515c99a2e68745617dda06e5a0f8dd4658f83",
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@value": "EXUS"
       }
-    ]
-  },
-  {
-    "@id": "_:cb157ec47d124cfd4eca4be6633f854a51b99bdb9d0d0107ec24a7d522825a63018",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cbe2e5fb290727da1edefbf47b3705c5ec9922c7c06fdf7721b0a10d3f571043c5"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "http://orcid.org/0000-0003-4289-4922"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Raul Palma"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbe2e5fb290727da1edefbf47b3705c5ec9922c7c06fdf7721b0a10d3f571043c5",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "PSNC"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/homepage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -984,204 +1271,43 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/temporal",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/PeriodOfTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/Standard",
+    "@id": "http://purl.org/dc/terms/Location",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/language",
+    "@id": "http://purl.org/dc/terms/title",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/LinguisticSystem"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/issued",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "_:cb8b1677c17ab248bbe5d4fba0bb58a47824d3fee4df5676a2c8f08172e1ae0391",
+    "@id": "_:cb149ad5afdee621f806027190afe39ff719d529f156d25fc2e15894a2bcb46d393",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb1b5a45b42c8c38f57878f3c1bb26e2eacbb2b0687ed96cae798dccd28aca841d7"
+        "@id": "_:cb17e460bb0d77c519106c3e306382e31e64e756156fb3eaeb018852f817ab3d1d4"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Areti Karamanou"
+        "@value": "Spiros Mouzakitis"
       }
     ]
   },
   {
-    "@id": "_:cb1b5a45b42c8c38f57878f3c1bb26e2eacbb2b0687ed96cae798dccd28aca841d7",
+    "@id": "_:cb17e460bb0d77c519106c3e306382e31e64e756156fb3eaeb018852f817ab3d1d4",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "CERTH"
+        "@value": "ICCS"
       }
     ]
   },
   {
-    "@id": "_:cb161791973f2c02b3c51906357aa0455e692c47493231447cd3244a3543b220975",
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@id": "https://www.cybele-project.eu/"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CYBELE project"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/conformsTo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/Standard"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/name",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/rights",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#Dataset",
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:cb1de5cbbf8222f552e11d3fe4bd1362ca1b5afb6ba4b20fbc291b09e9fce7c930a"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1de5cbbf8222f552e11d3fe4bd1362ca1b5afb6ba4b20fbc291b09e9fce7c930a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/dcat#theme"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/Agent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/cybele/model#accessTable",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/cybele/model#Database"
-      }
-    ],
+    "@id": "http://www.w3.org/ns/dcat#temporalResolution",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://w3id.org/cybele/model"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "accessTable"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/cybele/model#Table"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/publisher",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/affiliation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/RightsStatement",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/prov#Activity",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/prov#"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/Frequency",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/spatial",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/Location"
+        "@id": "http://www.w3.org/TR/vocab-dcat/"
       }
     ]
   },
@@ -1207,167 +1333,30 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/prov#Entity",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/prov#"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbe120fc0e98f33835c7bceb0883a4e882d45450c623df83fbd4daf27b0f093d73",
+    "@id": "_:cb435abad26ba5674cd5120bcfff21d2fd146202cc6d250e3db4a53d2b87166837",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb16155501fe965894f244bd01e474daa93a7339df81a7f57edf786b17124d196df"
+        "@id": "_:cb10a5abe0d9c9dbc30a02f4e0e27ec05fa466b5d1a409cb630d646c32065f2f892"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Dimitris Zeginis"
+        "@value": "Dilli Paudel"
       }
     ]
   },
   {
-    "@id": "_:cb16155501fe965894f244bd01e474daa93a7339df81a7f57edf786b17124d196df",
+    "@id": "_:cb10a5abe0d9c9dbc30a02f4e0e27ec05fa466b5d1a409cb630d646c32065f2f892",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "CERTH"
+        "@value": "WU"
       }
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dcat#DataService",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/TR/vocab-dcat/"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/cybele/model#connectionString",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/cybele/model#Database"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://w3id.org/cybele/model"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "connectionString"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/identifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "http://creativecommons.org/licenses/by/4.0/",
+    "@id": "https://www.cybele-project.eu/",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/LicenseDocument"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb801e0eff205aaff52b1182dfe28c9c7bcb201dc49689dc9369856187de4fa417",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cb1f182efc1381370bbbfdb9ecfc3719aa6d7bdb1c9337d8d187fa589cdc162793d"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Evangelos Kalampokis"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1f182efc1381370bbbfdb9ecfc3719aa6d7bdb1c9337d8d187fa589cdc162793d",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "CERTH"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/prov#Agent",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/prov#"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/accessRights",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/dc/terms/RightsStatement"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1307ee77d56c80b78852642d0976a68e83ae08c8ee0881c80f08840cbc78b9ae4",
-    "http://schema.org/affiliation": [
-      {
-        "@id": "_:cba8eda99af17c9d4699638f01418515c99a2e68745617dda06e5a0f8dd4658f83"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "Maria Plakia"
-      }
-    ]
-  },
-  {
-    "@id": "_:cba8eda99af17c9d4699638f01418515c99a2e68745617dda06e5a0f8dd4658f83",
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "EXUS"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#endpointURL",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/TR/vocab-dcat/"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#temporalResolution",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/TR/vocab-dcat/"
-      }
     ]
   },
   {
@@ -1379,23 +1368,34 @@
     ]
   },
   {
-    "@id": "_:cb18d3058b7cb1b1fb2ec8057301b1db4b4bdaa5c7291887f04adeb98553a606012",
+    "@id": "_:cb8b1677c17ab248bbe5d4fba0bb58a47824d3fee4df5676a2c8f08172e1ae0391",
     "http://schema.org/affiliation": [
       {
-        "@id": "_:cb1066d022b9c45192cf95a197ef8b2b21bccfbbe0a8a452abe0d13032852cb871b"
+        "@id": "_:cb1b5a45b42c8c38f57878f3c1bb26e2eacbb2b0687ed96cae798dccd28aca841d7"
       }
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "Konstantinos Latanis"
+        "@value": "Areti Karamanou"
       }
     ]
   },
   {
-    "@id": "_:cb1066d022b9c45192cf95a197ef8b2b21bccfbbe0a8a452abe0d13032852cb871b",
+    "@id": "_:cb1b5a45b42c8c38f57878f3c1bb26e2eacbb2b0687ed96cae798dccd28aca841d7",
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "SUITE5"
+        "@value": "CERTH"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
       }
     ]
   }

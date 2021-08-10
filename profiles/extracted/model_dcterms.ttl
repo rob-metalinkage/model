@@ -55,13 +55,13 @@ dcterms:temporal a owl:ObjectProperty ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range dcterms:PeriodOfTime .
 
-<https://w3id.org/cybele/model/proxy/dcterms> a owl:Ontology,
+<https://w3id.org/cybele/proxy/dcterms> a owl:Ontology,
         prov:Entity ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\profiles\\model.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
-            prov:endedAtTime "2021-08-09"^^xsd:date ;
+            prov:endedAtTime "2021-08-10"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] .
 

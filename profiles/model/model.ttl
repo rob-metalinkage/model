@@ -192,12 +192,12 @@ cybele:Database a owl:Class ;
         <http://xmlns.com/foaf/0.1> ;
     owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.ttl> ;
     owl:versionInfo "1.1" ;
-    prof:isProfileOf <https://w3id.org/cybele/model/proxy/cube>,
-        <https://w3id.org/cybele/model/proxy/dcat>,
-        <https://w3id.org/cybele/model/proxy/dcterms>,
-        <https://w3id.org/cybele/model/proxy/foaf>,
-        <https://w3id.org/cybele/model/proxy/prov>,
-        <https://w3id.org/cybele/model/proxy/skos> ;
+    prof:isProfileOf <https://w3id.org/cybele/proxy/cube>,
+        <https://w3id.org/cybele/proxy/dcat>,
+        <https://w3id.org/cybele/proxy/dcterms>,
+        <https://w3id.org/cybele/proxy/foaf>,
+        <https://w3id.org/cybele/proxy/prov>,
+        <https://w3id.org/cybele/proxy/skos> ;
     prof:isTransitiveProfileOf <http://purl.org/dc/terms>,
         <http://purl.org/linked-data/cube>,
         <http://www.w3.org/2004/02/skos/core>,
@@ -208,7 +208,7 @@ cybele:Database a owl:Class ;
             rdfs:label "C:\\repos\\rob-metalinkage\\cybelefork\\profiles\\model.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = model.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-08-09"^^xsd:date ;
+            prov:endedAtTime "2021-08-10"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:depiction <https://gitlab.res.eng.it/cybele/data/cybele-common-semantic-model/-/raw/master/images/model_matching.jpg> ;

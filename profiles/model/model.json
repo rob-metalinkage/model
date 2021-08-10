@@ -3,41 +3,16 @@
     "$id": "http://w3id.org/cybele/model?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "dcterms:MediaTypeOrExtent": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:MediaType": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:Agent": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:LinguisticSystem": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:LocationPeriodOrJurisdiction": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:PeriodOfTime": {
+        "prov:Agent": {
             "type": "object",
             "properties": {
-                "dcat:startDate": {
+                "prov:actedOnBehalfOf": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "dcat:endDate": {
+                "prov:qualifiedDelegation": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -46,54 +21,148 @@
             },
             "required": []
         },
-        "dcterms:Location": {
+        "prov:Activity": {
             "type": "object",
             "properties": {
-                "dcat:centroid": {
+                "prov:wasEndedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "dcat:bbox": {
+                "prov:qualifiedAssociation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedUsage": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasAssociatedWith": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:generated": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:endedAtTime": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasStartedBy": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedStart": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:startedAtTime": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:invalidated": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:used": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedCommunication": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedEnd": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasInformedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 }
             },
-            "required": []
-        },
-        "dcterms:RightsStatement": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:Frequency": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:Standard": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcterms:LicenseDocument": {
-            "type": "object",
-            "properties": {},
             "required": []
         },
         "prov:Entity": {
             "type": "object",
             "properties": {
-                "prov:wasAttributedTo": {
+                "prov:mentionOf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedAttribution": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedInvalidation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedQuotation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasInvalidatedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
                 "prov:value": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasAttributedTo": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:asInBundle": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:specializationOf": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -111,55 +180,7 @@
                         "type": "string"
                     }
                 },
-                "prov:wasQuotedFrom": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:invalidatedAtTime": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedAttribution": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedRevision": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedQuotation": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:wasDerivedFrom": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:hadPrimarySource": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedPrimarySource": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:mentionOf": {
+                "prov:wasRevisionOf": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -171,13 +192,7 @@
                         "type": "string"
                     }
                 },
-                "prov:wasInvalidatedBy": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:specializationOf": {
+                "prov:qualifiedDerivation": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -189,25 +204,37 @@
                         "type": "string"
                     }
                 },
-                "prov:asInBundle": {
+                "prov:hadPrimarySource": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "prov:qualifiedDerivation": {
+                "prov:invalidatedAtTime": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "prov:wasRevisionOf": {
+                "prov:wasDerivedFrom": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "prov:qualifiedInvalidation": {
+                "prov:qualifiedRevision": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:wasQuotedFrom": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "prov:qualifiedPrimarySource": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -216,106 +243,21 @@
             },
             "required": []
         },
-        "prov:Activity": {
+        "qb:Attachable": {
             "type": "object",
-            "properties": {
-                "prov:endedAtTime": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedUsage": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:invalidated": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedAssociation": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:startedAtTime": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedEnd": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:wasInformedBy": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:generated": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:wasAssociatedWith": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedCommunication": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:qualifiedStart": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:wasEndedBy": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:used": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:wasStartedBy": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
+            "properties": {},
             "required": []
         },
-        "prov:Agent": {
+        "qb:DataSet": {
             "type": "object",
             "properties": {
-                "prov:actedOnBehalfOf": {
+                "qb:structure": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "prov:qualifiedDelegation": {
+                "qb:slice": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -346,29 +288,6 @@
                     }
                 },
                 "qb:component": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:Attachable": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:DataSet": {
-            "type": "object",
-            "properties": {
-                "qb:structure": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qb:slice": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -419,12 +338,6 @@
         "qb:ComponentSpecification": {
             "type": "object",
             "properties": {
-                "qb:componentAttachment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "qb:order": {
                     "type": "array",
                     "items": {
@@ -436,32 +349,8 @@
                     "items": {
                         "type": "string"
                     }
-                }
-            },
-            "required": []
-        },
-        "cybele:Table": {
-            "type": "object",
-            "properties": {
-                "cybele:tableName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "cybele:Database": {
-            "type": "object",
-            "properties": {
-                "cybele:accessTable": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
-                "cybele:connectionString": {
+                "qb:componentAttachment": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -474,6 +363,80 @@
             "type": "object",
             "properties": {
                 "dcat:qualifiedRelation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "ns1:Service": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcat:DataService": {
+            "type": "object",
+            "properties": {
+                "dcat:endpointURL": {
+                    "type": "string"
+                },
+                "dcat:endpointDescription": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:servesDataset": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "dcat:Distribution": {
+            "type": "object",
+            "properties": {
+                "dcat:mediaType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:compressFormat": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:accessURL": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:downloadURL": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:byteSize": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:packageFormat": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cybele:accessDatabase": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -502,83 +465,21 @@
                 "dcat:theme"
             ]
         },
-        "ns1:Service": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dcat:DataService": {
-            "type": "object",
-            "properties": {
-                "dcat:endpointDescription": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:endpointURL": {
-                    "type": "string"
-                },
-                "dcat:servesDataset": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "dcat:Distribution": {
-            "type": "object",
-            "properties": {
-                "dcat:compressFormat": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:accessURL": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:byteSize": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:packageFormat": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:mediaType": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:downloadURL": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "cybele:accessDatabase": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
         "dcat:Catalog": {
             "type": "object",
             "properties": {
+                "dcat:service": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:catalog": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "dcat:themeTaxonomy": {
                     "type": "array",
                     "items": {
@@ -591,19 +492,7 @@
                         "type": "string"
                     }
                 },
-                "dcat:service": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "dcat:dataset": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "dcat:catalog": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -616,6 +505,117 @@
                     }
                 }
             },
+            "required": []
+        },
+        "cybele:Database": {
+            "type": "object",
+            "properties": {
+                "cybele:connectionString": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cybele:accessTable": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "cybele:Table": {
+            "type": "object",
+            "properties": {
+                "cybele:tableName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "dcterms:Standard": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:RightsStatement": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:LocationPeriodOrJurisdiction": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:PeriodOfTime": {
+            "type": "object",
+            "properties": {
+                "dcat:endDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:startDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "dcterms:LinguisticSystem": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:Location": {
+            "type": "object",
+            "properties": {
+                "dcat:bbox": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dcat:centroid": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "dcterms:Frequency": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:MediaTypeOrExtent": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:MediaType": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:LicenseDocument": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dcterms:Agent": {
+            "type": "object",
+            "properties": {},
             "required": []
         },
         "foaf:Document": {
@@ -645,13 +645,61 @@
         "foaf:Agent": {
             "type": "object",
             "properties": {
+                "foaf:account": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "foaf:holdsAccount": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
+                "foaf:made": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:topic_interest": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:interest": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:icqChatID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:skypeID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:birthday": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "foaf:mbox_sha1sum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:yahooChatID": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -669,49 +717,7 @@
                         "type": "string"
                     }
                 },
-                "foaf:weblog": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:skypeID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:gender": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:made": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:yahooChatID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:account": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:topic_interest": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:jabberID": {
+                "foaf:age": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -723,13 +729,19 @@
                         "type": "string"
                     }
                 },
-                "foaf:openid": {
+                "foaf:mbox": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "foaf:age": {
+                "foaf:gender": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:jabberID": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -741,25 +753,13 @@
                         "type": "string"
                     }
                 },
-                "foaf:icqChatID": {
+                "foaf:openid": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "foaf:birthday": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:interest": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:mbox": {
+                "foaf:weblog": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -771,7 +771,7 @@
         "skos:Concept": {
             "type": "object",
             "properties": {
-                "skos:semanticRelation": {
+                "foaf:focus": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -783,7 +783,7 @@
                         "type": "string"
                     }
                 },
-                "foaf:focus": {
+                "skos:semanticRelation": {
                     "type": "array",
                     "items": {
                         "type": "string"

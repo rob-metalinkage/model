@@ -1,5 +1,5 @@
 {
-    "@id": "https://w3id.org/cybele/model/proxy/skos",
+    "@id": "https://w3id.org/cybele/proxy/skos",
     "@context": [
         {
             "OrderedCollection": {

@@ -735,8 +735,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://purl.org/linked-data/cube#CodedProperty">qb:CodedProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#ComponentProperty">qb:ComponentProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#CodedProperty">qb:CodedProperty</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -796,8 +796,8 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#accessTable">cybele:accessTable</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#connectionString">cybele:connectionString</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#accessTable">cybele:accessTable</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -923,7 +923,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    The kind of service can be indicated using the dct:type property. Its value may be taken from a controlled vocabulary such as the INSPIRE spatial data service type vocabulary.
+                    If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property.
                 </td>
             </tr>
             <tr>
@@ -975,7 +975,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter.
+                    This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.
                 </td>
             </tr>
             <tr>
@@ -1027,9 +1027,9 @@
                 <th>In domain of</th>
                 <td>
                     <a href="#accessDatabase">cybele:accessDatabase</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1056,14 +1056,14 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    dcat:Resource is an extension point that enables the definition of any kind of catalog. Additional subclasses may be defined in a DCAT profile or application for catalogs of other kinds of resources.
+                    The class of all catalogued resources, the Superclass of dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog. This class carries properties common to all catalogued resources, including datasets and data services. It is strongly recommended to use a more specific sub-class. When describing a resource which is not a dcat:Dataset or dcat:DataService, it is recommended to create a suitable sub-class of dcat:Resource, or use dcat:Resource with the dct:type property to indicate the specific type.
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1117,9 +1117,9 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#wasAssociatedWith">prov:wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#actedOnBehalfOf">prov:actedOnBehalfOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasAssociatedWith">prov:wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1140,8 +1140,8 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#wasGeneratedBy">prov:wasGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1998,7 +1998,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.w3.org/ns/prov-o#
+                    http://www.w3.org/ns/prov#
                 </td>
             </tr>
             <tr>
@@ -2264,7 +2264,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset.
+                    Alternative temporal resolutions might be provided as different dataset distributions.
                 </td>
             </tr>
             <tr>
@@ -2430,11 +2430,11 @@
         <dt>foaf</dt>
         <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
         <dt>ns1</dt>
-        <dd><code>http://purl.org/dc/dcam/</code></dd>
-        <dt>ns2</dt>
-        <dd><code>http://www.w3.org/2003/06/sw-vocab-status/ns#</code></dd>
-        <dt>ns3</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>ns2</dt>
+        <dd><code>http://purl.org/dc/dcam/</code></dd>
+        <dt>ns3</dt>
+        <dd><code>http://www.w3.org/2003/06/sw-vocab-status/ns#</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
         <dt>prov</dt>
