@@ -12,6 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schema: <http://schema.org/> .
 @prefix cybele: <http://w3id.org/cybele/model#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @base <http://w3id.org/cybele/model#> .
 
 <http://w3id.org/cybele/model> rdf:type owl:Ontology ;
@@ -71,16 +72,20 @@
                                             ] ,
                                             [ schema:affiliation [ foaf:name "CERTH"
                                                                  ] ;
-                                              foaf:name "Dimitris Zeginis"
-                                            ] ,
-                                            [ schema:affiliation [ foaf:name "CERTH"
-                                                                 ] ;
                                               foaf:name "Eleni Panopoulou"
                                             ] ;
                             dct:creator [ schema:affiliation [ foaf:name "PSNC"
                                                              ] ;
                                           rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                                           foaf:name "Raul Palma"
+                                        ] ,
+                                        [ schema:affiliation [ foaf:name "CERTH"
+                                                                 ] ;
+                                              foaf:name "Dimitris Zeginis"
+                                        ] ,
+                                        [ schema:affiliation [ foaf:name "OGC"
+                                                                 ] ;
+                                              foaf:name "Rob Atkinson"
                                         ] ;
 														dct:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;                                        
                             dct:license <http://creativecommons.org/licenses/by/4.0/> ;
@@ -137,6 +142,14 @@ foaf:maker rdf:type owl:AnnotationProperty .
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
 
+#################################################################
+#    RDF property
+#################################################################
+
+###  http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure
+sdmx-attribute:unitMeasure a rdf:Property  ;
+    rdfs:label "Unit of Measure"@en ;
+    rdfs:isDefinedBy <https://sdmx.org/wp-content/uploads/01_sdmx_cog_annex_1_cdc_2009.pdf> .
 
 #################################################################
 #    Datatypes
@@ -187,6 +200,11 @@ dct:spatial rdf:type owl:ObjectProperty ;
             rdfs:isDefinedBy dct: .
 
 
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:ObjectProperty ;
+            rdfs:isDefinedBy dct: .
+
+
 ###  http://purl.org/dc/terms/temporal
 dct:temporal rdf:type owl:ObjectProperty ;
              rdfs:range dct:PeriodOfTime ;
@@ -197,6 +215,12 @@ dct:temporal rdf:type owl:ObjectProperty ;
 dct:accessRights rdf:type owl:ObjectProperty ;
              rdfs:range dct:RightsStatement ;
              rdfs:isDefinedBy dct: .
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Catalog ;
+                 rdfs:range dcat:Dataset ;
+                 rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
@@ -356,6 +380,7 @@ cybele:tableName rdf:type owl:DatatypeProperty ;
   								 rdfs:range rdfs:Literal ;
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .   								                        
 
+
 #################################################################
 #    Classes
 #################################################################
@@ -414,24 +439,32 @@ skos:Concept rdf:type owl:Class ;
 ###  http://www.w3.org/ns/dcat#Catalog
 dcat:Catalog rdf:type owl:Class ;
              rdfs:subClassOf dcat:Dataset ;
+             rdfs:subClassOf [ a owl:Restriction ; owl:minCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dcat:dataset ] ; 
              rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
 ###  http://www.w3.org/ns/dcat#DataService
 dcat:DataService rdf:type owl:Class ;
                  rdfs:subClassOf dcat:Resource ;
+                 rdfs:subClassOf [ a owl:Restriction ; owl:minCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dcat:endpointURL ] ; 
                  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              rdfs:subClassOf dcat:Resource ;
-             rdfs:subClassOf [ a owl:Restriction ; owl:onProperty dcat:theme ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+             rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:publisher ] ; 
+             rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:issued ] ; 
+             rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:modified ] ; 
+             rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:accrualPeriodicity ] ; 
              rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
 ###  http://www.w3.org/ns/dcat#Distribution
 dcat:Distribution rdf:type owl:Class ;
+                  rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:license ] ; 
+                  rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dcat:mediaType ] ; 
+                  rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dcat:byteSize ] ; 
                   rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
 
 
@@ -467,11 +500,14 @@ foaf:Document rdf:type owl:Class ;
 
 ###  http://purl.org/linked-data/cube#DataStructureDefinition
 qb:DataStructureDefinition rdf:type owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:minCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty qb:component ] ; 
     rdfs:isDefinedBy <http://purl.org/linked-data/cube> .
 
 
 ###  http://purl.org/linked-data/cube#ComponentSpecification
 qb:ComponentSpecification rdf:type owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty qb:dimension ] ; 
+    rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty qb:measure ] ; 
     rdfs:isDefinedBy <http://purl.org/linked-data/cube> .
 
 
@@ -487,17 +523,21 @@ qb:MeasureProperty rdf:type owl:Class ;
 
 ###  http://purl.org/linked-data/cube#DataSet
 qb:DataSet rdf:type owl:Class ;
+                     rdfs:subClassOf [ a owl:Restriction ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty qb:structure ] ; 
                      rdfs:isDefinedBy <http://purl.org/linked-data/cube> .
 
                      
 ###  http://w3id.org/cybele/model#Database
 cybele:Database rdf:type owl:Class ;
 									 rdfs:label "Database"@en;
+                   rdfs:subClassOf [ a owl:Restriction ; owl:minCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty cybele:connectionString ] ; 
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .
   								 
 ###  http://w3id.org/cybele/model#Table
 cybele:Table rdf:type owl:Class ;
 									 rdfs:label "Table"@en;
+                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty cybele:tableName ] ; 
+                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:subject ] ; 
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .  								 
                      
 #################################################################
